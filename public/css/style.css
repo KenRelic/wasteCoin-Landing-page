@@ -186,6 +186,66 @@ html {
   margin-top: -30em;
 }
 
+/* how it workss */
+
+
+#how-it-works{
+  padding-top: 6em;
+  padding: 6em 1em 1em 1em;
+  /* background-color: #bdbdbd; */
+  position: relative;
+}
+
+.heading{
+  text-align: center;
+  color: #00abd2;
+  margin-bottom: 1em;
+  font-size: 2em;
+}
+
+.steps{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.steps > div{
+  display: flex;
+  width: 30%;
+}
+
+.step-number{
+  font-size: 12em;
+  font-weight: bold;
+  color: #00d0ff;
+}
+
+.step-img{
+  height: 12vw;
+  width: 100%;
+  border-radius: 1em;
+  background-color: #00abd2;
+}
+.step-title{
+  font-size: 1.6em;
+  color: #222;
+  font-weight: 500;
+  margin: 0.3em 0;
+}
+
+#how-it-works > img{
+  position: absolute;
+  left: -9em;
+  bottom: -15em;
+  width: 70%;
+  z-index: -1;
+}
+.step-text-wrapper{
+  flex: 1;
+}
+
 @media all and (max-width:960px) {
   .nav {
     flex-direction: column;
@@ -276,6 +336,68 @@ html {
   }
 }
 
+@media all and (max-width:950px) {  
+  .steps{
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+  
+  .steps > div{
+    width: 40%;
+    margin: 1em;
+  }  
+  .step-img{
+    height: 15vw;
+  }
+  #how-it-works > img{
+    bottom: -10em;
+    width: 80%;
+  }
+}
+
+@media all and (max-width:760px) {    
+  .steps > div{
+    width: 46%;
+  
+  }  
+  .step-img{
+    height: 17vw;
+  }
+}
+
+@media all and (max-width:680px) {  
+  .steps{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 2em;
+  }
+  #how-it-works .heading{
+    margin-bottom: 0;
+  }
+  
+  .steps > div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }  
+  .step-img{
+    height: 10em;
+    width: 50%;
+    margin:0 auto;
+  }
+  #how-it-works > img{
+    bottom: -10em;
+    width: 80%;
+  }
+  .step-number{
+    font-size: 4em;
+  }
+}
 @media all and (max-width:560px) {
   .banner-text-img-section {
     padding: 80px 1em 2em 1em;
