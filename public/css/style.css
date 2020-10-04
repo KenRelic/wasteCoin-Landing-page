@@ -16,7 +16,7 @@ html {
   line-height: 1.5;
   width: 100vw;
   height: 300vh;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 .nav {
@@ -33,23 +33,29 @@ html {
   transition: all 0.3s linear;
   z-index: 1000;
 }
+
 .nav-style-light {
   background-color: #fff;
-  box-shadow: 10px 0 20px #bdbdbd;
+  box-shadow: 10px 0 20px #6d6d6dc1;
 }
-.nav-style-light a{
+
+.nav-style-light a {
   color: #222 !important;
 }
+
 .nav-style-light .logo-section {
   color: #01586c;
 }
+
 .nav-style-dark {
   background-color: #01586c;
   color: #fff;
 }
-.nav-style-dark a{
+
+.nav-style-dark a {
   color: #fff !important;
 }
+
 .logo-section {
   display: flex;
   justify-content: space-between;
@@ -73,9 +79,11 @@ html {
   cursor: pointer;
   font-size: 1.5em;
 }
-.menu-icon img{
+
+.menu-icon img {
   width: 60%;
 }
+
 .menu-items-section a {
   text-decoration: none;
   color: #fff;
@@ -83,20 +91,23 @@ html {
   position: relative;
   cursor: pointer;
 }
-.menu-items-section a:after{
+
+.menu-items-section a:after {
   /* content: " "; */
   width: 100%;
   height: 5px;
-  background-color:#00abd2;
+  background-color: #00abd2;
   position: absolute;
   left: 0;
   border-radius: 2em;
   bottom: -1em;
 }
+
 .menu-items-section a:hover {
-  color: #00abd2 !important; 
+  color: #00abd2 !important;
 }
-.menu-items-section a:hover ~ a:after{
+
+.menu-items-section a:hover~a:after {
   background-color: #ff5985 !important;
 }
 
@@ -121,16 +132,68 @@ html {
   color: #000;
 }
 
+.section {
+  width: 100vw;
+}
 
+.banner-text-img-section {
+  padding: 60px 1em 1em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #01586c;
+}
 
-@media all and (max-width:1023px) {
+.banner-bg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: auto;
+  width: 60vw;
+}
+
+.banner-text {
+  padding: 0 1em;
+}
+
+.banner-text h1 {
+  font-size: 6em;
+  font-size: 4em;
+  color: #00d0ff;
+  color: #fff;
+  line-height: 1;
+}
+
+.banner-text p {
+  color: #62e2ff;
+  font-size: 1.4em;
+  margin-top: 1em;
+}
+
+.banner-bg img:nth-of-type(1) {
+  width: 45vw;
+}
+
+.banner-bg img:nth-of-type(2) {
+  width: 40vw;
+  position: absolute;
+}
+
+.banner-swirl {
+  width: 100vw;
+  height: 500px;
+  margin-top: -30em;
+}
+
+@media all and (max-width:960px) {
   .nav {
     flex-direction: column;
     padding: 1em 1em 1em 2em;
   }
 
   .logo-section {
-  width: 100%;
+    width: 100%;
     margin: 0.5em auto;
     padding: auto 1em;
   }
@@ -147,15 +210,15 @@ html {
 
   }
 
-  .menu-items-section a{
+  .menu-items-section a {
     margin: 1em;
   }
 
   .menu-items-section button {
-    margin: 1em  0 0 0;
+    margin: 1em 0 0 0;
   }
 
-  .navbar-swirl{
+  .navbar-swirl {
     visibility: visible;
     width: 106%;
     height: 50%;
@@ -165,5 +228,77 @@ html {
     left: -0.5em;
     z-index: -8;
     transition: bottom 0.3s ease;
+  }
+}
+
+@media all and (max-width:760px) {
+  .banner-text-img-section {
+    padding: 80px 1em 2em 1em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    border-radius: 0 0 7em 7em;
+  }
+
+  .banner-bg {
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100vw;
+  }
+
+  .banner-text {
+    padding: 1em;
+    text-align: start;
+  }
+
+  .banner-text h1 {
+    font-size: 3em;
+    line-height: 1.3;
+  }
+
+  .banner-text p {
+    color: #62e2ff;
+    font-size: 1.4em;
+    margin-top: 1em;
+  }
+
+  .banner-bg img:nth-of-type(1) {
+    width: 70%;
+  }
+
+  .banner-bg img:nth-of-type(2) {
+    width: 60%;
+  }
+
+  .banner-swirl {
+    display: none;
+  }
+}
+
+@media all and (max-width:560px) {
+  .banner-text-img-section {
+    padding: 80px 1em 2em 1em;
+  }
+
+  .banner-bg {
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+  .banner-text h1 {
+    font-size: 3em;
+  }
+
+  .banner-bg img:nth-of-type(1) {
+    width: 100%;
+  }
+
+  .banner-bg img:nth-of-type(2) {
+    width: 90%;
   }
 }
