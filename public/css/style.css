@@ -189,11 +189,11 @@ html {
 
 /* how it workss */
 
-
 #how-it-works{
   padding: 0 1em 1em 1em;
-  /* background-color: #bdbdbd; */
   position: relative;
+  z-index: 2;
+  /* margin: -2em 0 0 0; */
 }
 
 .heading{
@@ -240,9 +240,9 @@ html {
 
 #how-it-works > img{
   position: absolute;
-  left: -9em;
+  left: -5em;
   bottom: -15em;
-  width: 70%;
+  width: 800px;
   z-index: -1;
 }
 .step-text-wrapper{
@@ -279,18 +279,6 @@ html {
 
   .menu-items-section button {
     margin: 1em 0 0 0;
-  }
-
-  .navbar-swirl {
-    visibility: visible;
-    width: 106%;
-    height: 50%;
-    position: absolute;
-    transform: rotateZ(178deg);
-    bottom: 1em;
-    left: -0.5em;
-    z-index: -8;
-    transition: bottom 0.3s ease;
   }
 }
 
