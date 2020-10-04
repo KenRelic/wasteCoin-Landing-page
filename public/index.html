@@ -11,6 +11,7 @@
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,9 +26,9 @@
       </div>
     </div>
     <div class="menu-items-section">
-      <a href="index.html">Home</a>
-      <a href="#">Why WasteCoin</a>
-      <a href="#">How it works</a>
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#why-wasteCoin">Why WasteCoin</a>
       <a href="#">Contact Us</a>
       <button>Get Started</button>
     </div>
@@ -35,26 +36,27 @@
   </nav>
 
   <main class="main">
+    <div id="home"></div>
     <section class="section" id="banner">
       <div class="banner-text-img-section">
         <div class="banner-text">
           <h1>Turn your waste <br> into Wealth</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reiciendis enim dolorum. Assumenda ea
-            voluptates mollitia esse deserunt optio ducimus similique cumque autem. Aliquam, dicta.</p>
+          <p>Wastecoin pays you for every Waste processed via the app. So with Wastecoin you earn while keeping your environment clean.</p>
         </div>
         <div class="banner-bg"><img src="./img/bg.png" alt=""><img src="./img/bg-illustration.png" alt=""></div>
       </div>
       <img src="./img/bg-1.png" alt="" class="banner-swirl">
     </section>
     <!-- HOW IT WORKS SECTION STARTS -->
-    <section class="section" id="how-it-works">
+    <div id="how-it-works"></div>
+    <section class="section" id="how-it-works-section">
       <h2 class="heading">How it works</h2>
       <div class="steps">
         <div>
           <p class="step-number">1</p>
           <div class="step-text-wrapper">
             <div class="step-img"></div>
-            <p class="step-title">Onboard</p>
+            <h3 class="step-title">Onboard</h3>
             <p class="step-description">Create an account and sign in</p>
           </div>
         </div>
@@ -62,7 +64,7 @@
           <p class="step-number">2</p>
           <div class="step-text-wrapper">
             <div class="step-img"></div>
-            <p class="step-title">Collect & deliver waste</p>
+            <h3 class="step-title">Collect & deliver waste</h3>
             <p class="step-description">Collect, gather and deliver PET bottles, cartons and others to our agents around
               you</p>
           </div>
@@ -71,7 +73,7 @@
           <p class="step-number">3</p>
           <div class="step-text-wrapper">
             <div class="step-img"></div>
-            <p class="step-title">Get paid</p>
+            <h3 class="step-title">Get paid</h3>
             <p class="step-description">Get paid in WasteCoins in your wallet; accumulate and redeem i exchange for
               cash, data and recharge cards</p>
           </div>
@@ -80,6 +82,32 @@
       <img src="./img/bg-img.png" alt="">
     </section>
     <!-- HOW IT WORKS SECTION ENDS -->
+    <!-- WHY WASTECOIN SECTION STARTS -->
+    <div id="why-wasteCoin"></div>
+    <section class="section" id="why-wastecoin-section">
+      <img src="./img/bg-2.png" alt="" class="why-section-swirl">
+      <div class="section-content">
+        <h2 class="heading">Why WasteCoin?</h2>
+        <div class="content-wrapper">
+          <div class="content">
+            <div class="icon-wrapper"><span></span></div>
+            <h3 class="step-title">Transparent e-wallet</h3>
+            <p>Enjoy access to your WasteCoin wallet 24/7</p>
+          </div>
+          <div class="content">
+            <div class="icon-wrapper"><span></span></div>
+            <h3 class="step-title">Passive income</h3>
+            <p>Earn from your waste</p>
+          </div>
+          <div class="content">
+            <div class="icon-wrapper"><span></span></div>
+            <h3 class="step-title">Safer Ecosystem</h3>
+            <p>Be part of a global innitiative to preserve the environment and ecosystem</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->

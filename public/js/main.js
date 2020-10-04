@@ -14,7 +14,7 @@ window.onscroll = function (e) {
 }
 
 function displayMenu() {
-  navBar.style.height = '300px';
+  navBar.style.height = '350px';
   menuIcon.children[0].classList.replace('fa-bars','fa-times');
   menuIcon.removeEventListener('click', displayMenu)
   menuIcon.addEventListener('click', closeMenuBar)
