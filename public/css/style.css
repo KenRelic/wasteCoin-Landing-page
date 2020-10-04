@@ -237,7 +237,7 @@ html {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    border-radius: 0 0 7em 0;
+    border-radius: 0 0 7em 7em;
   }
 
   .banner-bg {
@@ -279,7 +279,6 @@ html {
 @media all and (max-width:560px) {
   .banner-text-img-section {
     padding: 80px 1em 2em 1em;
-    border-radius: 0 0 7em 0;
   }
 
   .banner-bg {
