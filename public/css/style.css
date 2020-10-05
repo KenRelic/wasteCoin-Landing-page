@@ -15,7 +15,6 @@ html {
   color: #222;
   line-height: 1.5;
   width: 100vw;
-  height: 300vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -42,7 +41,7 @@ html::-webkit-scrollbar-thumb{
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2em;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,7 +128,8 @@ html::-webkit-scrollbar-thumb{
 }
 
 
-.menu-items-section button {
+.menu-items-section button,
+#why-wastecoin-section button {
   padding: 1em 2em;
   border-radius: 2em;
   border: none;
@@ -138,8 +138,15 @@ html::-webkit-scrollbar-thumb{
   background-color: #00abd2;
   cursor: pointer;
 }
-
-.menu-items-section button:focus {
+#why-wastecoin-section button{
+  background-color: #01586c;
+  margin: 5em auto;
+  display: block;
+  width: 30vw;
+  padding: 1.5em;
+}
+.menu-items-section button:focus,
+#why-wastecoin-section button:focus {
   outline: 2px dashed #fff;
   outline-offset: 5px;
 }
@@ -147,6 +154,12 @@ html::-webkit-scrollbar-thumb{
 .menu-items-section button:hover {
   background-color: #00d0ff;
   color: #000;
+}
+
+#why-wastecoin-section button:hover {
+  background-color: #fff;
+  color: #01586c;
+  font-weight: 600;
 }
 
 .section {
@@ -277,7 +290,8 @@ html::-webkit-scrollbar-thumb{
   width: 100vw;
   padding: 2em 1em;
   z-index: 2;
-  overflow-x: hidden;
+  overflow-x: hidden;  
+  padding-bottom: 15em;
 }
 
 #why-wastecoin-section .heading {
@@ -285,12 +299,11 @@ html::-webkit-scrollbar-thumb{
 }
 
 .why-section-swirl {
-  width: 103%;
+  width: 100%;
   height: 200px;
   transform: rotateZ(-0.8deg);
   margin-bottom: -2.5em;
   z-index: -1;
-  margin-left: -0.5em;
 }
 
 .section-content .content-wrapper {
@@ -298,7 +311,6 @@ html::-webkit-scrollbar-thumb{
   justify-content: space-around;
   align-items: center;
   width: 100%;
-
 }
 
 .content-wrapper .content {
@@ -314,7 +326,7 @@ html::-webkit-scrollbar-thumb{
 .content-wrapper .content>div {
   width: 15em;
   height: 15em;
-  background-color: #00d0ff;
+  background-color: #13f4da;
   border: 1em solid #fff;
   border-radius: 50%;
   margin: -4em auto 2em auto;
@@ -328,10 +340,68 @@ html::-webkit-scrollbar-thumb{
   padding: 0 1em;
 }
 
+/* FOOTER SECTION STYLING */
+.footer{
+  width: 100vw;}
+
+.footer-content-wrapper{
+  background-color: #01586c;
+  padding: 1em;
+  margin-top: -10em;
+  color:#fff;
+  width: 100%;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer-swirl{
+  margin-top: -15em;
+  width: 100%;
+  height: 250px;
+}
+.footer-content{
+  display: flex;
+  justify-content: flex-start;
+  line-height: 2.5;
+  width: 100%;
+}
+.footer-content > div{
+  flex: 1;
+  width: 32%;
+  margin: 1em;
+}
+.footer-content > div a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+.footer-content .social-media a{
+  display: inline;
+}
+.footer-logo{
+  margin-bottom: 1em
+}
+.footer-content img{
+  display: inline;
+  vertical-align: middle;
+  /* width: 30px; */
+}
+.footer-content .social-media p{
+  padding: 1em;
+}
+.copyright{
+  text-align: center;
+  display: block;
+  margin-top: 2em;
+  color: #52e0ff;
+  font-weight: bold;
+}
+
 @media all and (max-width:960px) {
   .nav {
     flex-direction: column;
-    padding: 1em 1em 1em 2em;
+    /* padding: 1em 1em 1em 2em; */
   }
 
   .logo-section {
@@ -500,6 +570,12 @@ html::-webkit-scrollbar-thumb{
     margin: 3em;
     padding: 0 1em 3em 1em;
   }
+
+  #why-wastecoin-section button{
+    margin: 2em auto;
+    display: block;
+    width: 50vw;
+  }
   
 }
 
@@ -580,15 +656,17 @@ html::-webkit-scrollbar-thumb{
   }
 
   .banner-text h1 {
-    font-size: 3em;
+    font-size: 2.6em;
   }
-
+  .banner-text p {
+    font-size: 1.3em;
+  }
   .banner-bg img:nth-of-type(1) {
-    width: 100%;
+    width: 70%;
   }
 
   .banner-bg img:nth-of-type(2) {
-    width: 90%;
+    width: 80%;
   }
   .step-img {
     height: 12em;
@@ -602,4 +680,31 @@ html::-webkit-scrollbar-thumb{
     padding: 0 1em 3em 1em;
     margin: 3em 1em;
   }
+
+  
+.footer-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-swirl{
+  margin-top: -15em;
+  width: 100%;
+  height: 250px;
+}
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 2.5;
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+}
+.footer-content > div{
+  width: 100%;
+  margin: 1em;
+}
+
 }
