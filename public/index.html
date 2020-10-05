@@ -11,7 +11,9 @@
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/all.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -26,10 +28,10 @@
       </div>
     </div>
     <div class="menu-items-section">
-      <a href="#home">Home</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#why-wasteCoin">Why WasteCoin</a>
-      <a href="#">Contact Us</a>
+      <a href="#home" title="Home">Home</a>
+      <a href="#how-it-works" title="How it works">How it works</a>
+      <a href="#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
+      <a href="#contact" title="contact us">Contact Us</a>
       <button>Get Started</button>
     </div>
     <!-- <img class="navbar-swirl" src="./img/bg-3.png" alt=""> -->
@@ -39,9 +41,10 @@
     <div id="home"></div>
     <section class="section" id="banner">
       <div class="banner-text-img-section">
-        <div class="banner-text">
+        <div class="banner-text" id="what-is-wasteCoin">
           <h1>Turn your waste <br> into Wealth</h1>
-          <p>Wastecoin pays you for every Waste processed via the app. So with Wastecoin you earn while keeping your environment clean.</p>
+          <p>Wastecoin pays you for every Waste processed via the app. So with Wastecoin you earn while keeping your
+            environment clean.</p>
         </div>
         <div class="banner-bg"><img src="./img/bg.png" alt=""><img src="./img/bg-illustration.png" alt=""></div>
       </div>
@@ -57,7 +60,7 @@
           <div class="step-text-wrapper">
             <div class="step-img"></div>
             <h3 class="step-title">Onboard</h3>
-            <p class="step-description">Create an account and sign in                  </p>
+            <p class="step-description">Create an account and sign in </p>
           </div>
         </div>
         <div>
@@ -106,10 +109,41 @@
             <p>Be part of a global innitiative to preserve the environment and ecosystem</p>
           </div>
         </div>
+        <button>Get Started</button>
       </div>
+
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
+  <footer class="footer">
+    <img src="./img/bg-3.png" alt="" class="footer-swirl">
+    <div class="footer-content-wrapper" id="contact">
+      <img src="./img/logo.png" alt="" class="footer-logo">
+      <div class="footer-content">
+        <div class="contact">
+          <a href="mailto:info@wastecoin.com" title="send us an email" class="email"><img src="./img/email.png" alt="" class="email">
+            info@wastecoin.com</a>
+          <p class="social-media">
+            <a href="https://www.facebook.com/wastecoin" title="contact us on facebook"><img src="./img/facebook.png" alt="" class="facebook"></a>
+            <a href="https://www.twitter.com/wastecoin" title="contact us on twitter"><img src="./img/twitter.png" alt="" class="twitter"></a>
+            <a href="https://www.instagram.com/wastecoin" title="contact us on instagram"><img src="./img/instagram.png" alt="" class="instagram"></a>
+            @wasteCoin
+          </p>
+        </div>
+        <div class="sitemap">
+          <a href="#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
+          <a href="#how-it-works" title="how it works">How it works</a>
+          <a href="#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
+        </div>
+        <div class="others">
+          <a href="#" title="Terms of service">Terms of service</a>
+          <a href="#" title="Privacy policy">Privacy policy</a>
+          <a href="#" title="site map">Site map</a>
+        </div>
+      </div>
+      <small class="copyright">&copy; Copyright WasteCoin 2020</small>
+    </div>
+  </footer>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <!-- <script src="/__/firebase/7.22.0/firebase-app.js"></script> -->
