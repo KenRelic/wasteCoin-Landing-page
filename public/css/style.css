@@ -20,23 +20,34 @@ html {
 }
 
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 1em;
-  background: linear-gradient(90deg, #f5f5f5 , #ffffff, #f5f5f5);
+  background: linear-gradient(90deg, #f5f5f5, #ffffff, #f5f5f5);
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background-color: #01586c;
   box-shadow: 0 0 20px rgb(0, 0, 0);
   width: 0.8em;
   border-radius: 2em;
 }
-#how-it-works{
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+}
+
+#how-it-works {
   margin-bottom: 60px;
   margin-top: -12em;
 }
+
 .nav {
-  width: 100%;
+  width: 100vw;
   height: 60px;
   position: fixed;
   top: 0;
@@ -137,14 +148,17 @@ html::-webkit-scrollbar-thumb{
   margin: 0 0 0 2em;
   background-color: #00abd2;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
-#why-wastecoin-section button{
-  background-color: #01586c;
+
+#why-wastecoin-section button {
+  background-color: #014554;
   margin: 5em auto;
   display: block;
   width: 30vw;
   padding: 1.5em;
 }
+
 .menu-items-section button:focus,
 #why-wastecoin-section button:focus {
   outline: 2px dashed #fff;
@@ -163,11 +177,12 @@ html::-webkit-scrollbar-thumb{
 }
 
 .section {
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .banner-text-img-section {
-  padding: 100px 1em 1em 1em;
+  padding: 100px 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -213,7 +228,7 @@ html::-webkit-scrollbar-thumb{
 
 .banner-swirl {
   width: 100vw;
-  height: 500px;
+  height: 400px;
   margin-top: -30em;
 }
 
@@ -290,12 +305,12 @@ html::-webkit-scrollbar-thumb{
   width: 100vw;
   padding: 2em 1em;
   z-index: 2;
-  overflow-x: hidden;  
+  overflow-x: hidden;
   padding-bottom: 15em;
 }
 
 #why-wastecoin-section .heading {
-  color: #fff;
+  color: #004b5d;
 }
 
 .why-section-swirl {
@@ -332,65 +347,81 @@ html::-webkit-scrollbar-thumb{
   margin: -4em auto 2em auto;
 }
 
-.content h3{
+.content h3 {
   color: #197f96;
   padding: 0 1em;
 }
-.content p{
+
+.content p {
   padding: 0 1em;
 }
 
 /* FOOTER SECTION STYLING */
-.footer{
-  width: 100vw;}
+.footer {
+  width: 100vw;
+}
 
-.footer-content-wrapper{
+.footer-content-wrapper {
   background-color: #01586c;
   padding: 1em;
   margin-top: -10em;
-  color:#fff;
+  color: #fff;
   width: 100%;
   /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-.footer-swirl{
+
+.footer-swirl {
   margin-top: -15em;
   width: 100%;
   height: 250px;
 }
-.footer-content{
+
+.footer-content {
   display: flex;
   justify-content: flex-start;
   line-height: 2.5;
   width: 100%;
 }
-.footer-content > div{
+
+.footer-content>div {
   flex: 1;
   width: 32%;
   margin: 1em;
 }
-.footer-content > div a{
+
+.footer-content>div a {
   color: #fff;
   text-decoration: none;
   display: block;
+  width: fit-content;
 }
-.footer-content .social-media a{
+
+.footer-content>div a:hover {
+  color: #00d0ff;
+}
+
+.footer-content .social-media a {
   display: inline;
 }
-.footer-logo{
+
+.footer-logo {
   margin-bottom: 1em
 }
-.footer-content img{
+
+.footer-content img {
   display: inline;
   vertical-align: middle;
   /* width: 30px; */
 }
-.footer-content .social-media p{
+
+.footer-content .social-media p {
   padding: 1em;
 }
-.copyright{
+
+.copyright {
   text-align: center;
   display: block;
   margin-top: 2em;
@@ -401,7 +432,7 @@ html::-webkit-scrollbar-thumb{
 @media all and (max-width:960px) {
   .nav {
     flex-direction: column;
-    /* padding: 1em 1em 1em 2em; */
+    padding: 0.6em 1em;
   }
 
   .logo-section {
@@ -479,14 +510,16 @@ html::-webkit-scrollbar-thumb{
   .banner-swirl {
     display: none;
   }
-  #how-it-works{
+
+  #how-it-works {
     margin-top: 0;
   }
+
   .content-wrapper .content>div {
     width: 12em;
     height: 12em;
   }
-  
+
 }
 
 @media all and (max-width:950px) {
@@ -495,7 +528,7 @@ html::-webkit-scrollbar-thumb{
     justify-content: space-around;
     width: 100%;
     flex-wrap: wrap;
-    padding: 2em;
+    padding: 1em;
   }
 
   .steps>div {
@@ -515,7 +548,7 @@ html::-webkit-scrollbar-thumb{
 
 @media all and (max-width:760px) {
   .steps>div {
-    width: 46%;
+    width: 45%;
 
   }
 
@@ -546,7 +579,8 @@ html::-webkit-scrollbar-thumb{
   .step-img {
     height: 12em;
     width: 12em;
-    border-radius: 50%;;
+    border-radius: 50%;
+    ;
     margin: 0 auto;
   }
 
@@ -558,9 +592,11 @@ html::-webkit-scrollbar-thumb{
   .step-number {
     font-size: 4em;
   }
+
   .content-wrapper {
     flex-wrap: wrap;
   }
+
   .content-wrapper .content {
     text-align: center;
     width: 60%;
@@ -571,12 +607,12 @@ html::-webkit-scrollbar-thumb{
     padding: 0 1em 3em 1em;
   }
 
-  #why-wastecoin-section button{
+  #why-wastecoin-section button {
     margin: 2em auto;
     display: block;
     width: 50vw;
   }
-  
+
 }
 
 @media all and (max-width:950px) {  
@@ -658,9 +694,11 @@ html::-webkit-scrollbar-thumb{
   .banner-text h1 {
     font-size: 2.6em;
   }
+
   .banner-text p {
     font-size: 1.3em;
   }
+
   .banner-bg img:nth-of-type(1) {
     width: 70%;
   }
@@ -668,12 +706,14 @@ html::-webkit-scrollbar-thumb{
   .banner-bg img:nth-of-type(2) {
     width: 80%;
   }
+
   .step-img {
     height: 12em;
     width: 12em;
     border-radius: 50%;
     background-color: #00abd2;
   }
+
   .content-wrapper .content {
     width: 94%;
     height: fit-content;
@@ -681,30 +721,33 @@ html::-webkit-scrollbar-thumb{
     margin: 3em 1em;
   }
 
-  
-.footer-content-wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.footer-swirl{
-  margin-top: -15em;
-  width: 100%;
-  height: 250px;
-}
-.footer-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  line-height: 2.5;
-  width: 100%;
-  text-align: center;
-  justify-items: center;
-}
-.footer-content > div{
-  width: 100%;
-  margin: 1em;
-}
+
+  .footer-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-swirl {
+    margin-top: -15em;
+    width: 100%;
+    height: 250px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2.5;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-content>div {
+    width: 100%;
+    margin: 1em;
+  }
 
 }
