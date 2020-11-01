@@ -75,7 +75,7 @@ body {
 }
 
 .nav-style-dark {
-  background-color: #01586c;
+  background-color: #002a34;
   color: #fff;
 }
 
@@ -138,7 +138,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
+#why-wastecoin-section .heading{
+  margin-bottom: 2.5em;
+}
 #why-wastecoin-section button {
   background-color: #014554;
   color: #fff;
@@ -176,6 +178,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #01586c;
+  background-color: #002a34;
   margin-bottom: 0em;
 }
 
@@ -326,9 +329,7 @@ body {
 
 .why-section-swirl {
   width: 100%;
-  /* height: 200px; */
-  transform: rotateZ(-0.8deg);
-  margin-bottom: -2.5em;
+  margin-bottom: -12.5em;
   z-index: -1;
 }
 
@@ -380,7 +381,7 @@ body {
 }
 
 .footer-content-wrapper {
-  background-color: #01586c;
+  background-color: #002a34;
   padding: 1em;
   margin-top: -10em;
   color: #fff;
@@ -402,6 +403,10 @@ body {
   justify-content: flex-start;
   line-height: 2.5;
   width: 100%;
+}
+.footer-header{
+  font-size: 1.5em;
+  color: #00d0ff;
 }
 
 .footer-content>div {
@@ -462,6 +467,25 @@ body {
   }
 }
 
+@media all and (max-width:990px) {
+  .banner-text h1 {
+    /* font-size: 3em; */
+  }
+
+  .banner-swirl {
+    width: 100%;
+    margin-top: -24em;
+  }
+  .why-section-swirl {
+    margin-bottom: -3.5em;  }
+}
+
+@media all and (max-width:820px) {
+  .banner-text h1 {
+    font-size: 3em;
+  }
+}
+
 @media all and (max-width:960px) {
   .nav {
     flex-direction: column;
@@ -501,7 +525,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column-reverse;
-    border-radius: 0 0 7em 0;
+    border-radius: 0;
   }
 
   .banner-bg {
@@ -514,6 +538,10 @@ body {
   .banner-text {
     padding: 1em;
     text-align: start;
+  }
+
+  .banner-text  button{
+    width: 200px;
   }
 
   .banner-text h1 {
@@ -539,7 +567,7 @@ body {
     width: 60%;
   }
 
-  .banner-swirl {
+  .banner-swirl,.footer-swirl {
     display: none;
   }
 
@@ -650,7 +678,7 @@ body {
 @media all and (max-width:560px) {
   .banner-text-img-section {
     padding: 80px 1em 2em 1em;
-    border-radius: 0 0 7em 0;
+    /* border-radius: 0 0 7; */
   }
 
   .banner-bg {
