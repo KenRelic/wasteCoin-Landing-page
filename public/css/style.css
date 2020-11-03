@@ -87,6 +87,7 @@ body {
 
 .logo img {
   margin-right: 1em;
+  width: 3em;
 }
 
 .menu-icon {
@@ -112,45 +113,47 @@ body {
 }
 
 
-.menu-items-section button,
-#why-wastecoin-section button,
-.banner-text button {
+.menu-items-section .get-app-btn,
+#why-wastecoin-section a,
+.banner-text a {
   padding: 1em 2em;
   border-radius: 2em;
   border: none;
-  color: #000;
+  color: #000 !important;
   margin: 0 0 0 2em;
   background-color: #00d0ff;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
 }
 
 #why-wastecoin-section .heading {
   margin-bottom: 2.5em;
 }
 
-#why-wastecoin-section button {
+#why-wastecoin-section a {
   background-color: #014554;
-  color: #fff;
+  color: #fff !important;
   margin: 5em auto;
   display: block;
   width: 30%;
   padding: 1.5em;
 }
 
-.menu-items-section button:focus,
-#why-wastecoin-section button:focus {
+.menu-items-section a:focus,
+#why-wastecoin-section a:focus {
   outline: 2px dashed #fff;
   outline-offset: 5px;
 }
 
-.menu-items-section button:hover,
-.banner-text button:hover {
+.menu-items-section a:hover,
+.banner-text a:hover {
   background-color: #2effb6;
   color: #000;
 }
 
-#why-wastecoin-section button:hover {
+#why-wastecoin-section a:hover {
   background-color: #fff;
   color: #01586c;
   font-weight: 600;
@@ -193,11 +196,12 @@ body {
   color: #000;
   width: 400px;
   text-align: center;
+  cursor: pointer;
 }
 
 .banner-text h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 5em;
+  font-size: 4.5em;
   color: #00d0ff;
   color: #fff;
   line-height: 1.2;
@@ -220,7 +224,8 @@ body {
 
 .banner-swirl {
   width: 100%;
-  margin-top: -30em;
+  margin-top: -32em;
+  pointer-events: none;
 }
 
 /* how it workss */
@@ -317,6 +322,7 @@ body {
   width: 100%;
   margin-bottom: -12.5em;
   z-index: -1;
+  pointer-events: none;
 }
 
 .section-content .content-wrapper {
@@ -382,6 +388,7 @@ body {
   margin-top: -15em;
   width: 100%;
   margin-left: -1px;
+  pointer-events: none;
 }
 
 .footer-content {
@@ -429,6 +436,7 @@ body {
 .footer-content img {
   display: inline;
   vertical-align: middle;
+  margin: 0.5em;
 }
 
 .contact-form {
@@ -452,20 +460,19 @@ body {
   .banner-text h1 {
     font-size: 4em;
   }
+  .banner-swirl {
+    margin-top: -28em;
+  }
 }
 
 @media all and (max-width:990px) {
-  .banner-text h1 {
-    /* font-size: 3em; */
-  }
-
+ 
   .banner-text a {
     width: 40vw;
   }
 
   .banner-swirl {
-    width: 100%;
-    margin-top: -22em;
+    margin-top: -23em;
   }
 
   .why-section-swirl {
@@ -598,6 +605,10 @@ body {
     bottom: -10em;
     width: 80%;
   }
+  .banner-swirl {
+    width: 100%;
+    margin-top: -20em;
+  }
 }
 
 @media all and (max-width:760px) {
@@ -617,7 +628,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 1em 2em;
+    padding: 1em;
   }
 
   #how-it-works-section .heading {
