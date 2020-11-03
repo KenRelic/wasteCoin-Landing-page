@@ -315,50 +315,36 @@
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
-  <footer class="footer">
-    <img src="./img/bg-3.webp" alt="" class="footer-swirl">
-    <div class="footer-content-wrapper" id="contact">
-      <img src="./img/footer-logo.png" alt="wastecoin log0" class="footer-logo">
-      <div class="footer-content">
-        <div class="contact">
-          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email"
-            class="email"><img src="./img/email.png" alt="" class="email">
-            info@wastecoin.com</a>
-          <p class="social-media">
-            <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer"
-              title="contact us on facebook"><img src="./img/facebook.png" alt="" class="facebook"></a>
-            <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer"
-              title="contact us on twitter"><img src="./img/twitter.png" alt="" class="twitter"></a>
-            <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer"
-              title="contact us on instagram"><img src="./img/instagram.png" alt="" class="instagram"></a>
-            @wasteCoin
-          </p>
-        </div>
-        <div class="sitemap">
-          <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
-          <a href="index.html#how-it-works" title="how it works">How it works</a>
-          <a href="index.html#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
-        </div>
-        <div class="others">
-          <a href="terms-of-service.html" title="Terms of service">Terms of service</a>
-          <a href="privacy-policy.html" title="Privacy policy">Privacy policy</a>
-          <a href="#" title="site map">Site map</a>
-        </div>
+  <footer>
+    <div class="footer-content" id="contact">
+      <div class="contact">
+        <header class="footer-header">Connect with us</header>
+        <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><img
+            src="./img/email.png" alt="" class="email">
+          info@wastecoin.com</a>
+        <p class="social-media">
+          <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer"
+            title="contact us on facebook"><img src="./img/facebook.png" alt="" class="facebook"></a>
+          <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer"
+            title="contact us on twitter"><img src="./img/twitter.png" alt="" class="twitter"></a>
+          <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer"
+            title="contact us on instagram"><img src="./img/instagram.png" alt="" class="instagram"></a>
+          @wasteCoin
+        </p>
       </div>
-      <small class="copyright"> Copyright &copy; WasteCoin 2020</small>
+      <div class="sitemap">
+        <a href="./index.html/#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
+        <a href="./index.html/#how-it-works" title="how it works">How it works</a>
+        <a href="./index.html/#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
+      </div>
+      <div class="others">
+        <a href="./terms-of-service.html" title="Terms of service">Terms of service</a>
+        <a href="./privacy-policy.html" title="Privacy policy">Privacy policy</a>
+      </div>
+    </div>
+    <small class="copyright"> Copyright &copy; WasteCoin 2020</small>
     </div>
   </footer>
-
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <!-- <script src="/__/firebase/7.22.0/firebase-app.js"></script> -->
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <!-- <script src="/__/firebase/7.22.0/firebase-analytics.js"></script> -->
-
-  <!-- Initialize Firebase -->
-  <!-- <script src="/__/firebase/init.js"></script> -->
-  <!-- <script src="./js/main.js" defer></script> -->
   <script>
     const menuIcon = document.querySelector(".menu-icon"),
       navBar = document.querySelector(".nav"),
@@ -379,19 +365,7 @@
         .classList.replace("nav-style-light", "nav-style-dark")
     }, menuIcon.addEventListener("click", displayMenu);
   </script>
-  <script src="./js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-    window.addEventListener('load', () => {
-      //register service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register('./sw.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg, reg.scope);
-          });
-      }
-    })
-  </script>
+  
 </body>
 
 </html>

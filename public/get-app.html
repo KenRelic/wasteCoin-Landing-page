@@ -171,7 +171,7 @@
 
 
 <body>
-  <nav class="nav nav-style-dark">
+  <nav class="nav nav-style-light">
     <div class="logo-section">
       <div class="logo">
         <img src="./img/logo.png" alt="wastecoin logo">
@@ -186,7 +186,6 @@
       <a href="./index.html#how-it-works" title="How it works">How it works</a>
       <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
       <a href="./index.html#contact" title="contact us">Contact Us</a>
-      <button class="get-app-btn">Get Started</button>
     </div>
   </nav>
 
@@ -196,23 +195,34 @@
         <div class="banner-text">
           <h1>Get the App</h1>
           <p>To start converting your waste into wealth, get the WasteCoin app on playstore.</p>
-          <a href="./get-app.html"><button>Download from playstore</button></a>
+          <a href="./get-app.html">Download from playstore</a>
         </div>
       </div>
       <img src="./img/Rectangle.svg" alt="">
     </section>
     <style>
-      html{
-        background-color: #01586c;
-        background-color: #002a34;
+      html {
+        background-color: #ffffff;
         font-size: 13px;
         height: 100vh;
+        overflow: hidden;
       }
-      .main{
+
+      .main {
         padding-top: 80px;
         height: 100vh;
         position: relative;
+
       }
+
+      .banner-text h1 {
+        color: #01586c;
+      }
+
+      .banner-text p {
+        color: #000;
+      }
+
       .banner-text button {
         color: #222;
         padding: 1em 2em;
@@ -221,7 +231,7 @@
         border: none;
         margin-top: 2em;
         cursor: pointer;
-        background-color: #fff;
+        background-color: rgb(3, 169, 158);
       }
 
       .banner-text button:focus {
@@ -229,19 +239,21 @@
         outline-offset: 5px;
       }
 
-      .section{
+      .section {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
       }
+
       .banner-text-img-section {
         padding: 2em 1em;
         box-shadow: -20px 0 20px rgba(0, 0, 0, 0.413);
         border-radius: 2em 0 0 2em;
-     
+        background-color: #ffffff;
       }
-      .section img{
+
+      .section img {
         width: 200%;
         height: 100%;
         margin-right: -6em;
@@ -251,13 +263,12 @@
       }
 
 
-      @media all and (max-width: 960px){
-        .banner-text button{
+      @media all and (max-width: 960px) {
+        .banner-text button {
           width: 240px;
         }
 
       }
-     
     </style>
     </section>
   </main>
