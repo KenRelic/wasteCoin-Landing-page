@@ -215,7 +215,7 @@
         <h2 class="heading  wow fadeInUp">Why WasteCoin?</h2>
         <div class="content-wrapper">
           <div class="content wow fadeInUp">
-            <div class="icon-wrapper"><span></span></div>
+            <div class="icon-wrapper"><img src="./img/wallet.svg" alt=""></div>
             <h3 class="step-title">Transparent e-wallet</h3>
             <p>Enjoy access to your WasteCoin wallet 24/7</p>
           </div>
@@ -243,12 +243,11 @@
       <div class="footer-content">
         <div class="contact">
           <header class="footer-header">Connect with us</header>
-          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><img src="./img/email.png" alt="" class="email">
-            info@wastecoin.com</a>
+          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span>  info@wastecoin.com</a>
           <p class="social-media">
-            <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on facebook"><img src="./img/facebook.png" alt="" class="facebook"></a>
-            <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on twitter"><img src="./img/twitter.png" alt="" class="twitter"></a>
-            <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on instagram"><img src="./img/instagram.png" alt="" class="instagram"></a>
+            <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+            <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+            <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
             @wasteCoin
           </p>
         </div>
@@ -279,15 +278,15 @@
   <script src="./js/wow.min.js"></script>
   <script>
         new WOW().init();
-    //     window.addEventListener('load', () => {
-    //   //register service worker
-    //   if ("serviceWorker" in navigator) {
-    //     navigator.serviceWorker.register('./sw.js')
-    //       .then((reg) => {
-    //         console.log('Service worker registered.', reg, reg.scope);
-    //       });
-    //   }
-    // })
+        window.addEventListener('load', () => {
+      //register service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg, reg.scope);
+          });
+      }
+    })
   </script>
 </body>
 

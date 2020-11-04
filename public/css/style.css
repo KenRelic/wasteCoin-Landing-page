@@ -155,7 +155,7 @@ body {
 
 #why-wastecoin-section a:hover {
   background-color: #fff;
-  color: #01586c;
+  color: #000;
   font-weight: 600;
 }
 
@@ -197,6 +197,9 @@ body {
   width: 400px;
   text-align: center;
   cursor: pointer;
+}
+#why-wastecoin-section a{
+  width: 400px;
 }
 
 .banner-text h1 {
@@ -346,7 +349,7 @@ body {
 }
 
 .icon-wrapper img {
-  width: 80%;
+  width: 70%;
   height: 90%;
 }
 
@@ -433,10 +436,11 @@ body {
   margin-bottom: 1em;
 }
 
-.footer-content img {
+.footer-content a > span {
   display: inline;
   vertical-align: middle;
   margin: 0.5em;
+  font-size: 1.5em
 }
 
 .contact-form {
@@ -467,9 +471,10 @@ body {
 
 @media all and (max-width:990px) {
  
-  .banner-text a {
+  .banner-text a,#why-wastecoin-section a{
     width: 40vw;
   }
+
 
   .banner-swirl {
     margin-top: -23em;
@@ -699,7 +704,7 @@ body {
     font-size: 2.6em;
   }
 
-  .banner-text a {
+  .banner-text a,#why-wastecoin-section a {
     width: 100%;
   }
 
