@@ -21,9 +21,6 @@ const filesToCache = [
   'img/bg-illustration.webp',
   'img/phone.svg',
   'img/logo.svg',
-  'img/email.png',
-  'img/twitter.png',
-  'img/instagram.png',
   'img/bg-img.webp',
   'manifest.json',
   // 'webfonts/fa-solid-900.eot',
@@ -53,10 +50,10 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(response => {
         if (response) {
-          console.log('Found ', event.request.url, ' in cache');
+          // console.log('Found ', event.request.url, ' in cache');
           return response;
         }
-        console.log('Network request for ', event.request.url);
+        // console.log('Network request for ', event.request.url);
         return fetch(event.request)
 
           .then(response => {
@@ -74,7 +71,6 @@ self.addEventListener('fetch', event => {
 
 self.addEventListener('activate', event => {
   console.log('Activating new service worker...');
-
   const cacheAllowlist = [staticCacheName];
 
   self.skipWaiting();
