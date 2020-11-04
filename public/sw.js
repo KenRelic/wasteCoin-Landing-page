@@ -19,6 +19,7 @@ const filesToCache = [
   'img/flow2.SVG',
   'img/flow3.SVG',
   'img/bg-illustration.webp',
+  'img/phone.svg',
   'img/logo.svg',
   'img/email.png',
   'img/twitter.png',

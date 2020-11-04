@@ -103,6 +103,8 @@
     .fa-times:before {
       content: "\f00d";
     }
+    .fa-envelope:before {
+  content: "\f0e0"; }
 
     .sr-only {
       border: 0;
@@ -175,7 +177,7 @@
   <nav class="nav nav-style-dark">
     <div class="logo-section">
       <div class="logo">
-        <img src="./img/logo.png" alt="wasteCoin logo">
+        <img src="./img/logo.svg" alt="wasteCoin logo">
         <p>WasteCoin</p>
       </div>
       <div class="menu-icon">
@@ -187,9 +189,8 @@
       <a href="./index.html#how-it-works" title="How it works">How it works</a>
       <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
       <a href="#contact" title="contact us">Contact Us</a>
-      <button>Get Started</button>
+      <a href="./get-app.html" class="get-app-btn">Get Started</a>
     </div>
-    <!-- <img class="navbar-swirl" src="./img/bg-3.webp" alt=""> -->
   </nav>
 
   <main class="main">
@@ -267,59 +268,35 @@
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
-  <footer>
-    <div class="footer-content" id="contact">
-      <div class="contact">
-        <header class="footer-header">Connect with us</header>
-        <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><img
-            src="./img/email.png" alt="" class="email">
-          info@wastecoin.com</a>
-        <p class="social-media">
-          <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer"
-            title="contact us on facebook"><img src="./img/facebook.png" alt="" class="facebook"></a>
-          <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer"
-            title="contact us on twitter"><img src="./img/twitter.png" alt="" class="twitter"></a>
-          <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer"
-            title="contact us on instagram"><img src="./img/instagram.png" alt="" class="instagram"></a>
-          @wasteCoin
-        </p>
+  <img src="./img/flow3.SVG" alt="" class="footer-swirl">
+  <footer class="footer">
+  
+    <div class="footer-content-wrapper" id="contact">
+      <div class="footer-content">
+        <div class="contact">
+          <header class="footer-header">Connect with us</header>
+          <p class="social-media">
+            <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
+              <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+              <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+              <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+            </p>
+        </div>
+        <div class="sitemap">
+          <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
+          <a href="index.html#how-it-works" title="how it works">How it works</a>
+          <a href="index.html#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
+        </div>
+        <div class="others">
+          <a href="terms-of-service.html" title="Terms of service">Terms of service</a>
+          <a href="privacy-policy.html" title="Privacy policy">Privacy policy</a>
+        </div>
       </div>
-      <div class="sitemap">
-        <a href="./index.html/#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
-        <a href="./index.html/#how-it-works" title="how it works">How it works</a>
-        <a href="./index.html/#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
-      </div>
-      <div class="others">
-        <a href="./terms-of-service.html" title="Terms of service">Terms of service</a>
-        <a href="./privacy-policy.html" title="Privacy policy">Privacy policy</a>
-      </div>
-    </div>
-    <small class="copyright"> Copyright &copy; WasteCoin 2020</small>
+      <small class="copyright"> Copyright &copy; WasteCoin 2020</small>
     </div>
   </footer>
 
-  <script>
-    const menuIcon = document.querySelector(".menu-icon"),
-      navBar = document.querySelector(".nav"),
-      navBarSwirl = document.querySelector(".nav .navbar-swirl");
-    let menuItemWrapper = document.querySelector(".menu-items-section");
-
-    function displayMenu() {
-      navBar.style.height = "350px", menuIcon.children[0].classList.replace("fa-bars", "fa-times"), menuIcon
-        .removeEventListener("click", displayMenu), menuIcon.addEventListener("click", closeMenuBar)
-    }
-
-    function closeMenuBar() {
-      navBar.style.height = "60px", menuIcon.children[0].classList.replace("fa-times", "fa-bars"), menuIcon
-        .removeEventListener("click", closeMenuBar), menuIcon.addEventListener("click", displayMenu)
-    }
-    menuItemWrapper = Array.from(menuItemWrapper.children), window.onscroll = function (e) {
-      return window.pageYOffset > 80 ? navBar.classList.replace("nav-style-dark", "nav-style-light") : navBar
-        .classList.replace("nav-style-light", "nav-style-dark")
-    }, menuIcon.addEventListener("click", displayMenu);
-  </script>
-
-
+  <script src="./js/main.js" defer></script>
 </body>
 
 </html>

@@ -63,6 +63,8 @@
 }.fa-linkedin-in:before {
   content: "\f0e1";
 }
+.fa-envelope:before {
+  content: "\f0e0"; }
 
 .fa-bars:before {
   content: "\f0c9"; }
@@ -243,18 +245,17 @@
       <div class="footer-content">
         <div class="contact">
           <header class="footer-header">Connect with us</header>
-          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span>  info@wastecoin.com</a>
           <p class="social-media">
+          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
             <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
             <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
-            <a href="https://www.instagram.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
-            @wasteCoin
+            <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
           </p>
         </div>
         <div class="sitemap">
-          <a href="index.html/#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
-          <a href="index.html/#how-it-works" title="how it works">How it works</a>
-          <a href="index.html/#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
+          <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
+          <a href="index.html#how-it-works" title="how it works">How it works</a>
+          <a href="index.html#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
         </div>
         <div class="others">
           <a href="terms-of-service.html" title="Terms of service">Terms of service</a>
@@ -278,15 +279,15 @@
   <script src="./js/wow.min.js"></script>
   <script>
         new WOW().init();
-        window.addEventListener('load', () => {
-      //register service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register('./sw.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg, reg.scope);
-          });
-      }
-    })
+      //   window.addEventListener('load', () => {
+      // //register service worker
+      // if ("serviceWorker" in navigator) {
+      //   navigator.serviceWorker.register('./sw.js')
+      //     .then((reg) => {
+      //       console.log('Service worker registered.', reg, reg.scope);
+      //     });
+      // }
+    // })
   </script>
 </body>
 
