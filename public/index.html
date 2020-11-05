@@ -278,15 +278,15 @@
   <script src="./js/wow.min.js"></script>
   <script>
         new WOW().init();
-    //     window.addEventListener('load', () => {
-    //   //register service worker
-    //   if ("serviceWorker" in navigator) {
-    //     navigator.serviceWorker.register('./sw.js')
-    //       .then((reg) => {
-    //         console.log('Service worker registered.', reg, reg.scope);
-    //       });
-    //   }
-    // })
+        window.addEventListener('load', () => {
+      //register service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg, reg.scope);
+          });
+      }
+    })
   </script>
 </body>
 
