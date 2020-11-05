@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Waste collection and recovery app where you get rewarded for proper waste disposal developed by WasteCoin Nigeria" />
+  <title>WasteCoin Ng</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000d10">
+  <meta name="apple-mobile-web-app-title" content="WasteCoin Nigeria website">
+  <meta name="theme-color" content="#000d10" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="msapplication-TileColor" content="#000d10">
+  <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="stylesheet" href="./css/all.css"> -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap">
+  </noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css">
+  </noscript>
+  <style>
+    /*!
+ * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fad,
+    .fab {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
+
+    .fa-instagram:before {
+      content: "\f16d";
+    }
+
+    .fa-facebook:before {
+      content: "\f09a";
+    }
+
+    .fa-facebook-f:before {
+      content: "\f39e";
+    }
+
+    .fa-facebook-messenger:before {
+      content: "\f39f";
+    }
+
+    .fa-facebook-square:before {
+      content: "\f082";
+    }
+
+    .fa-twitter:before {
+      content: "\f099";
+    }
+
+    .fa-linkedin:before {
+      content: "\f08c";
+    }
+
+    .fa-linkedin-in:before {
+      content: "\f0e1";
+    }
+
+    .fa-bars:before {
+      content: "\f0c9";
+    }
+
+    .fa-times:before {
+      content: "\f00d";
+    }
+    .fa-envelope:before {
+  content: "\f0e0"; }
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Brands';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("./webfonts/fa-brands-400.eot");
+      src: url("./webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-brands-400.woff2") format("woff2"), url("./webfonts/fa-brands-400.woff") format("woff"), url("./webfonts/fa-brands-400.ttf") format("truetype"), url("./webfonts/fa-brands-400.svg#fontawesome") format("svg");
+    }
+
+    .fab {
+      font-family: 'Font Awesome 5 Brands';
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("./webfonts/fa-regular-400.eot");
+      src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
+    }
+
+    .far {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url("./webfonts/fa-solid-900.eot");
+      src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
+    }
+
+    .fa,
+    .fas {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+  </style>
+</head>
+
+
+<body>
+  <nav class="nav nav-style-light">
+    <div class="logo-section">
+      <div class="logo">
+        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
+        <p>WasteCoin</p></a>
+      
+      </div>
+      <div class="menu-icon"  tabindex="1" title="menu toggle">
+        <span id="icon" class="fa fa-bars"></span>
+      </div>
+    </div>
+    <div class="menu-items-section">
+      <a href="./index.html" title="Home">Home</a>
+      <a href="./index.html#how-it-works" title="How it works">How it works</a>
+      <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
+      <a href="./index.html#contact" title="contact us">Contact Us</a>
+    </div>
+  </nav>>
+  </nav>
+
+  <main class="main">
+    <section class="section">
+      <div class="banner-text-img-section">
+        <div class="banner-text">
+          <h1>Get the App</h1>
+          <p>To start converting your waste into wealth, get the WasteCoin app on playstore.</p>
+          <a href="https://play.google.com/store/apps/details?id=com.buildforsdg.wastecoin" rel="noreferrer" target="_self" title="Download app from Playstore">Download from playstore</a>
+        </div>
+      </div>
+      <img src="./img/phone.svg" alt="">
+    </section>
+    <style>
+      html {
+        background-color: #ffffff;
+        font-size: 13px;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .main {
+        padding-top: 80px;
+        height: 100vh;
+        position: relative;
+
+      }
+
+      .banner-text h1 {
+        color: #01586c;
+      }
+
+      .banner-text p {
+        color: #000;
+      }
+
+      .banner-text button {
+        color: #222;
+        padding: 1em 2em;
+        font-size: 1.2em;
+        border-radius: 2em;
+        border: none;
+        margin-top: 2em;
+        cursor: pointer;
+        background-color: rgb(3, 169, 158);
+      }
+
+      .banner-text button:focus {
+        outline: 2px dashed #fff;
+        outline-offset: 5px;
+      }
+
+      .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .banner-text-img-section {
+        padding: 2em 1em;
+        box-shadow: -20px 0 20px rgba(0, 0, 0, 0.413);
+        border-radius: 2em 0 0 2em;
+        background-color: #ffffff;
+      }
+
+      .section img {
+        width: 200%;
+        height: 100%;
+        margin-right: -6em;
+        /* right: -9em; */
+        position: absolute;
+        z-index: -1;
+      }
+
+
+      @media all and (max-width: 960px) {
+        .banner-text button {
+          width: 240px;
+        }
+
+      }
+    </style>
+    </section>
+  </main>
+  <script src="./js/main.js" defer></script>
+</body>
+
+</html>

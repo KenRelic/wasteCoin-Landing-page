@@ -1,0 +1,31 @@
+#privacy{
+  padding: 100px 1em 12em 1em;
+  font-size: 1.2em;
+ 
+}
+
+h1{
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: #001e24;
+}
+
+h2{
+  margin: 1em 0 0.5em 0;
+  color:  #01586c;
+}
+
+ul{
+  list-style-position: inside;
+  list-style-type: lower-roman;
+  margin-top: 0.3em;
+}
+
+a{
+  color: #01586c;
+  text-decoration: none;
+}
+
+p b{
+  color: #051a1f;
+}
