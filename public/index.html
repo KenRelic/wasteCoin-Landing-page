@@ -30,7 +30,6 @@
   <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- <link rel="stylesheet" href="./css/all.css"> -->
   <link rel="preload"  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
   <link rel="stylesheet"  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;800&display=swap"></noscript>    
@@ -142,10 +141,11 @@
   <nav class="nav nav-style-dark">
     <div class="logo-section">
       <div class="logo">
-        <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p>
+        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
+        <p>WasteCoin</p></a>
+      
       </div>
-      <div class="menu-icon">
+      <div class="menu-icon"  tabindex="1" title="menu toggle">
         <span id="icon" class="fa fa-bars"></span>
       </div>
     </div>
@@ -154,9 +154,8 @@
       <a href="#how-it-works" title="How it works">How it works</a>
       <a href="#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
       <a href="#contact" title="contact us">Contact Us</a>
-      <a href="./get-app.html" class="get-app-btn">Get Started</a>
+      <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
     </div>
-    <!-- <img class="navbar-swirl" src="./img/bg-3.webp" alt=""> -->
   </nav>
 
   <main class="main">
@@ -167,7 +166,7 @@
           <h1>Turn your waste <br> into Wealth</h1>
           <p>Wastecoin pays you for every Waste processed via the app. <br> So with Wastecoin you earn while keeping your
             environment clean.</p>
-           <a href="./get-app.html">Get the App</a>
+           <a href="./get-app.html" title="get the app">Get the App</a>
         </div>
         <div class="banner-bg"><img src="./img/bg1.SVG" alt=""><img src="./img/bg-illustration.webp" alt=""></div>
       </div>
@@ -232,7 +231,7 @@
             <p>Be part of a global innitiative to preserve the environment and ecosystem</p>
           </div>
         </div>
-        <a href="./get-app.html" class="wow fadeInUp get-app-btn">Get Started</a>
+        <a href="./get-app.html" class="wow fadeInUp get-app-btn" title="get started">Get Started</a>
       </div>
 
     </section>
@@ -246,11 +245,11 @@
         <div class="contact">
           <header class="footer-header">Connect with us</header>
           <p class="social-media">
-          <a href="mailto:info@wastecoin.com" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
-            <a href="https://www.facebook.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
-            <a href="https://www.twitter.com/wastecoin" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
-            <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
-          </p>
+            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
+              <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+              <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+              <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+            </p>
         </div>
         <div class="sitemap">
           <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
@@ -279,15 +278,15 @@
   <script src="./js/wow.min.js"></script>
   <script>
         new WOW().init();
-        window.addEventListener('load', () => {
-      //register service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register('./sw.js')
-          .then((reg) => {
-            console.log('Service worker registered.', reg, reg.scope);
-          });
-      }
-    })
+    //     window.addEventListener('load', () => {
+    //   //register service worker
+    //   if ("serviceWorker" in navigator) {
+    //     navigator.serviceWorker.register('./sw.js')
+    //       .then((reg) => {
+    //         console.log('Service worker registered.', reg, reg.scope);
+    //       });
+    //   }
+    // })
   </script>
 </body>
 

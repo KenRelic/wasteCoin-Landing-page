@@ -90,6 +90,13 @@ body {
   width: 3em;
 }
 
+.logo a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -126,6 +133,7 @@ body {
   transition: all 0.3s ease;
   text-decoration: none;
   text-align: center;
+  /* font-weight: 600; */
 }
 
 .menu-items-section .get-app-btn{
@@ -145,21 +153,24 @@ body {
   padding: 1.5em;
 }
 
-.menu-items-section a:focus,
-#why-wastecoin-section a:focus {
-  outline: 2px dashed #fff;
+.logo a:focus,.menu-icon:focus,.menu-items-section a:focus,.banner-text a:focus,
+#why-wastecoin-section a:focus,#why-wastecoin-section a:focus,.footer-content>div a:focus {
+  outline: 2px dashed #2effb6;
   outline-offset: 5px;
 }
 
-.menu-items-section a:hover,
+.menu-items-section .get-app-btn:hover,
 .banner-text a:hover,#why-wastecoin-section a:hover {
   background-color: #2effb6;
   color: #000 !important;
-  font-weight: 600;
+
 }
 
 #why-wastecoin-section a:hover {
   background-color: #fff;
+}
+#why-wastecoin-section a:focus{
+  outline: 2px dashed #fff;
 }
 
 .section {
@@ -393,7 +404,7 @@ body {
 .footer-swirl {
   margin-top: -15em;
   width: 100%;
-  margin-left: -1.5px;
+  margin-left: -2px;
   pointer-events: none;
 }
 
@@ -417,7 +428,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-content>div a {
@@ -425,7 +436,7 @@ body {
   text-decoration: none;
   display: block;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0.5em;
 }
 
 .footer-content>div a:hover {
@@ -443,7 +454,6 @@ body {
 .footer-content a > span {
   display: inline-block;
   vertical-align: middle;
-  margin: 0.3em;
   font-size: 2.5em;
 }
 
