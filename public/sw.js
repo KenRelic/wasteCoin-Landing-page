@@ -34,7 +34,7 @@ const filesToCache = [
 const staticCacheName = 'wastecoin-cache-v1';
 
 self.addEventListener('install', event => {
-  console.log('Attempting to install service worker and cache static assets');
+  // console.log('Attempting to install service worker and cache static assets');
   self.skipWaiting();
   event.waitUntil(
     caches.open(staticCacheName)
@@ -70,7 +70,7 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('activate', event => {
-  console.log('Activating new service worker...');
+  // console.log('Activating new service worker...');
   const cacheAllowlist = [staticCacheName];
 
   self.skipWaiting();
