@@ -427,7 +427,7 @@ body {
   width: 32%;
   margin: 1em;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -836,8 +836,8 @@ body {
   .footer-content>div {
     width: 100%;
     margin: 1em;
+    align-items: center;
   }
-
 }
 
 @media all and (min-width:1440px) {
