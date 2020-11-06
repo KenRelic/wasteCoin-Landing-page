@@ -247,6 +247,7 @@ body {
 
 /* how it workss */
 
+
 #how-it-works-section {
   padding: 0 1em 1em 1em;
   position: relative;
@@ -270,7 +271,7 @@ body {
   margin: 0 auto;
 }
 
-.steps>div {
+.steps > div{
   display: flex;
   width: 30%;
   margin: 1em;
@@ -568,6 +569,7 @@ body {
     line-height: 1.3;
   }
 
+
   .heading {
     font-size: 2em;
   }
@@ -699,10 +701,71 @@ body {
 
 }
 
+@media all and (max-width:950px) {  
+  .steps{
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2em;
+  }
+  
+  .steps > div{
+    width: 40%;
+    margin: 1em;
+  }  
+  .step-img{
+    height: 15vw;
+  }
+  #how-it-works > img{
+    bottom: -10em;
+    width: 80%;
+  }
+}
+
+@media all and (max-width:760px) {    
+  .steps > div{
+    width: 46%;
+  
+  }  
+  .step-img{
+    height: 17vw;
+  }
+}
+
+@media all and (max-width:680px) {  
+  .steps{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1em 2em;
+  }
+  #how-it-works .heading{
+    margin-bottom: 0;
+  }
+  
+  .steps > div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }  
+  .step-img{
+    height: 10em;
+    width: 50%;
+    margin:0 auto;
+  }
+  #how-it-works > img{
+    bottom: -10em;
+    width: 80%;
+  }
+  .step-number{
+    font-size: 4em;
+  }
+}
 @media all and (max-width:560px) {
   .banner-text-img-section {
     padding: 80px 1em 2em 1em;
-    /* border-radius: 0 0 7; */
   }
 
   .banner-bg {
