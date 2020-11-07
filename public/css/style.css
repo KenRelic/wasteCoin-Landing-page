@@ -1,3 +1,44 @@
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/Montserrat-Bold.eot"); 
+  src: url("./../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), 
+    url("./../fonts/Montserrat-Bold.woff") format("woff"), 
+    url("./../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/Montserrat-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./../fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../fonts/Poppins-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./../fonts/Poppins-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-bold";
+  src: url("./../fonts/Poppins-ExtraBold.eot"); 
+  src: url("./../fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+    url("./../fonts/Poppins-ExtraBold.woff") format("woff"),
+    url("./../fonts/Poppins-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* RESET  */
 *,
 html,
@@ -11,7 +52,8 @@ body,
 
 html {
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat';
+  font-weight: 500;
   color: #222;
   line-height: 1.5;
   width: 100vw;
@@ -216,7 +258,8 @@ body {
 }
 
 .banner-text h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins-bold', sans-serif;
+  font-weight: 700;
   font-size: 4.5em;
   color: #00d0ff;
   color: #fff;
@@ -282,7 +325,8 @@ body {
 
 .step-number {
   font-size: 12em;
-  font-weight: bold;
+  font-family: 'Poppins-bold';
+  font-weight: 800;
   color: #009cbf;
 }
 
@@ -310,6 +354,7 @@ body {
   font-weight: 700;
   margin: 0.3em 0;
   font-family: 'Montserrat', sans-serif;
+  font-weight:700;
 }
 
 #how-it-works-section>img {
