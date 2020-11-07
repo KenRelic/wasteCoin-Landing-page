@@ -70,7 +70,7 @@ function preventTabndexing() {
   if (mediaQuery.matches) {
     return menuLinks.forEach(link => link.setAttribute('tabindex', -1))
   }
-  closeMenuBar();
+  // closeMenuBar();
   return menuLinks.forEach(link => link.setAttribute('tabindex', 1))
 }
 

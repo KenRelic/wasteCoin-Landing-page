@@ -1,3 +1,44 @@
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/Montserrat-Bold.eot"); 
+  src: url("./../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), 
+    url("./../fonts/Montserrat-Bold.woff") format("woff"), 
+    url("./../fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./../fonts/Montserrat-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./../fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./../fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+font-face {
+  font-family: "Poppins";
+  src: url("./../fonts/Poppins-Regular.eot"); /* IE9 Compat Modes */
+  src: url("./../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../fonts/Poppins-Regular.woff") format("woff"), /* Modern Browsers */
+    url("./../fonts/Poppins-Regular.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-bold";
+  src: url("./../fonts/Poppins-ExtraBold.eot"); 
+  src: url("./../fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+    url("./../fonts/Poppins-ExtraBold.woff") format("woff"),
+    url("./../fonts/Poppins-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
 /* RESET  */
 *,
 html,
@@ -11,7 +52,8 @@ body,
 
 html {
   font-size: 13px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat';
+  font-weight: 500;
   color: #222;
   line-height: 1.5;
   width: 100vw;
@@ -140,9 +182,6 @@ body {
   margin-left: 0;
 }
 
-#why-wastecoin-section .heading {
-  margin-bottom: 2.5em;
-}
 
 #why-wastecoin-section a {
   background-color: #014554;
@@ -194,10 +233,12 @@ body {
   justify-content: flex-end;
   flex: auto;
   width: 60%;
+  height: 30em;
 }
 
 .banner-text {
   padding: 0 1em;
+  z-index: 2;
 }
 
 .banner-text a {
@@ -217,7 +258,8 @@ body {
 }
 
 .banner-text h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins-bold', sans-serif;
+  font-weight: 700;
   font-size: 4.5em;
   color: #00d0ff;
   color: #fff;
@@ -232,16 +274,20 @@ body {
 
 .banner-bg img:nth-of-type(1) {
   width: 45vw;
+  z-index: 2;
 }
 
-.banner-bg img:nth-of-type(2) {
-  width: 40vw;
+.banner-bg svg {
+  width: 43vw;
+  height: 100%;
   position: absolute;
+  z-index: 1;
 }
 
 .banner-swirl {
   width: 100%;
-  margin-top: -32em;
+  margin-top: -40em;
+  margin-bottom: -14em;
   pointer-events: none;
 }
 
@@ -279,7 +325,8 @@ body {
 
 .step-number {
   font-size: 12em;
-  font-weight: bold;
+  font-family: 'Poppins-bold';
+  font-weight: 800;
   color: #009cbf;
 }
 
@@ -307,6 +354,7 @@ body {
   font-weight: 700;
   margin: 0.3em 0;
   font-family: 'Montserrat', sans-serif;
+  font-weight:700;
 }
 
 #how-it-works-section>img {
@@ -334,11 +382,12 @@ body {
 
 #why-wastecoin-section .heading {
   color: #004b5d;
+  margin-bottom: 2.5em;
 }
 
 .why-section-swirl {
   width: 100%;
-  margin-bottom: -12.5em;
+  margin-bottom: -22em;
   z-index: -1;
   pointer-events: none;
 }
@@ -403,9 +452,9 @@ body {
 }
 
 .footer-swirl {
-  margin-top: -15em;
+  margin-top: -28em;
+  margin-bottom:-10em;
   width: 100%;
-  margin-left: -2px;
   pointer-events: none;
 }
 
@@ -480,7 +529,7 @@ body {
     font-size: 4em;
   }
   .banner-swirl {
-    margin-top: -28em;
+    margin-top: -38em;
   }
 }
 
@@ -488,15 +537,6 @@ body {
  
   .banner-text a,#why-wastecoin-section a{
     width: 40vw;
-  }
-
-
-  .banner-swirl {
-    margin-top: -23em;
-  }
-
-  .why-section-swirl {
-    margin-bottom: -3.5em;
   }
 }
 
@@ -558,6 +598,7 @@ body {
   .banner-text {
     padding: 1em;
     text-align: start;
+    width: 100%;
   }
 
   .banner-text button {
@@ -584,13 +625,18 @@ body {
     width: 70%;
   }
 
-  .banner-bg img:nth-of-type(2) {
-    width: 60%;
+  .banner-bg svg {
+    width: 65%;
   }
 
   .banner-swirl,
-  .footer-swirl {
+  .footer-swirl,
+  .why-section-swirl {
     display: none;
+  }
+  
+  #why-wastecoin-section .heading{
+    margin-top: 3em;
   }
 
   #how-it-works {
@@ -628,7 +674,7 @@ body {
   }
   .banner-swirl {
     width: 100%;
-    margin-top: -20em;
+    /* margin-top: -20em; */
   }
 }
 
@@ -752,7 +798,7 @@ body {
   }  
   .step-img{
     height: 10em;
-    width: 50%;
+    width: 10em;
     margin:0 auto;
   }
   #how-it-works > img{
@@ -874,5 +920,39 @@ body {
 
   .step-img {
     height: calc(12/100 * 1440px);
+  }
+}
+
+
+@media all and (max-width:1024px){
+  .banner-bg{
+    height: 35em;
+  }
+}
+@media all and (max-width:560px){
+  .banner-bg{
+    height: 28em;
+  }
+}
+@media all and (max-width:420px){
+  .banner-bg{
+    height: 20em;
+  }
+}
+@media all and (max-width:320px){
+  .banner-bg{
+    height: 17em;
+  }
+}
+
+@media all and (min-width:1024px){
+  .banner-bg{
+    height: 35em;
+  }
+}
+
+@media all and (min-width:1200px){
+  .banner-bg{
+    height: 40em;
   }
 }
