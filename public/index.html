@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#000d10">
   <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -146,7 +146,7 @@
       </div>
     </div>
     <div class="menu-items-section">
-      <a href="#home" title="Home">Home</a>
+      <!-- <a href="#home" title="Home">Home</a> -->
       <a href="#how-it-works" title="How it works">How it works</a>
       <a href="#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
       <a href="#contact" title="contact us">Contact Us</a>
@@ -300,11 +300,11 @@ viewBox="0 0 2.02463 0.547496"
               <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
             </p>
         </div>
-        <div class="sitemap">
+        <!-- <div class="sitemap">
           <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
           <a href="index.html#how-it-works" title="how it works">How it works</a>
           <a href="index.html#what-is-wasteCoin" title="what is wastecoin">What is wasteCoin</a>
-        </div>
+        </div> -->
         <div class="others">
           <a href="terms-of-service.html" title="Terms of service">Terms of service</a>
           <a href="privacy-policy.html" title="Privacy policy">Privacy policy</a>
@@ -317,15 +317,15 @@ viewBox="0 0 2.02463 0.547496"
   <script src="./js/wow.min.js"></script>
   <script>
         new WOW().init();
-      //   window.addEventListener('load', () => {
-      // //register service worker
-      // if ("serviceWorker" in navigator) {
-      //   navigator.serviceWorker.register('./sw.js')
-      //     .then((reg) => {
-      //       // console.log('Service worker registered.', reg, reg.scope);
-      //     });
-      // }
-    // })
+        window.addEventListener('load', () => {
+      //register service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg, reg.scope);
+          });
+      }
+    })
   </script>
 </body>
 
