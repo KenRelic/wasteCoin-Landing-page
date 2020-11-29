@@ -25,7 +25,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="./manifest.webmanifest">
   <meta name="msapplication-TileColor" content="#000d10">
   <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -89,8 +89,10 @@
     .fa-times:before {
       content: "\f00d";
     }
+
     .fa-envelope:before {
-  content: "\f0e0"; }
+      content: "\f0e0";
+    }
 
     .sr-only {
       border: 0;
@@ -160,74 +162,201 @@
 
 
 <body>
-  <nav class="nav nav-style-light">
-    <div class="logo-section">
-      <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p></a>
-      
-      </div>
-      <div class="menu-icon"  tabindex="1" title="menu toggle">
-        <span id="icon" class="fa fa-bars"></span>
-      </div>
-    </div>
-    <div class="menu-items-section">
-      <a href="./index.html" title="Home">Home</a>
-      <a href="./index.html#how-it-works" title="How it works">How it works</a>
-      <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
-      <a href="./index.html#contact" title="contact us">Contact Us</a>
-    </div>
-  </nav>>
-  </nav>
-
   <main class="main">
-    <section class="section">
-      <div class="banner-text-img-section">
-        <div class="banner-text">
-          <h1>Get the App</h1>
-          <p>To start converting your waste into wealth, get the WasteCoin app on playstore.</p>
-          <a href="https://play.google.com/store/apps/details?id=com.buildforsdg.wastecoin" rel="noreferrer" target="_self" title="Download app from Playstore">Download from playstore</a>
+    <section class="" id="coming-soon-section">
+      <div class="notice-wrapper">
+        <div class="logo">
+          <a href="./index.html" tabindex="1" title="WasteCoin Home page"> <img src="./img/logo.svg"
+              alt="wastecoin logo">
+            <p>WasteCoin</p>
+          </a>
+        </div>
+        <div>
+          <h1>Coming Soon</h1>
+          <p>The WasteCoin mobile app is in development and will soon be available on Google playstore and Apple
+            store.
+            <br>
+          </p>
+          <p>Will you like to be among the first to test the app when it is ready? please fill the form and we will
+            contact you when it is ready.</p>
+          <form action="" method="post" name="email-form" novalidate>
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" name="" id="email">
+              <p class="error-msg">Please provide a valid email address.</p>
+            </div>
+            <button type="submit" id="send-email-btn">Send Email</button>
+          </form>
+        </div>
+        <div class="media-links">
+          <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer"
+            title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+          <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer"
+            title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+          <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer"
+            title="contact us on instagram"><span class="fab fa-instagram"></span></a>
         </div>
       </div>
-      <img src="./img/phone.svg" alt="">
+      <div id="brand-image-wrapper">
+        <img src="./img/phone.svg" alt="">
+      </div>
     </section>
     <style>
       html {
-        background-color: #ffffff;
+        background-color: #b5f2dc;
         font-size: 13px;
         height: 100vh;
         overflow: hidden;
+        background-image: url('./img/leaf.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: normal;
+        /* background-color: #01586c; */
+        ;
       }
 
       .main {
-        padding-top: 80px;
         height: 100vh;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .logo a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
       }
 
-      .banner-text h1 {
+      .logo>a p {
+        margin-top: 0;
+        font-family: 'Poppins-bold', sans-serif;
+        color: #01dec4;
+      }
+
+      #coming-soon-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 600px;
+        height: 600px;
+        width: 960px;
+        border-radius: 2em !important;
+        box-shadow: 0px 10px 15px #01586c3e;
+        overflow: hidden;
+      }
+
+      #brand-image-wrapper {
+        grid-column: 4 / span 2;
+        background-color: #01586c;
+        background-color: #01dec4;
+        background-image: url('./img/leaf.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        height: 100%;
+        grid-row: auto;
+      }
+
+      .notice-wrapper {
+        grid-column: 1 / span 3;
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: space-between;
+        padding: 24px;
+      }
+
+      .notice-wrapper h1 {
         color: #01586c;
       }
 
-      .banner-text p {
-        color: #000;
+      .notice-wrapper p {
+        color: #01586c;
+        margin-top: 1em;
       }
 
-      .banner-text button {
-        color: #222;
-        padding: 1em 2em;
+      .notice-wrapper p:nth-of-type(2) {
+        /* font-weight: bold; */
+      }
+
+      h1 {
+        font-family: 'Poppins-bold', sans-serif;
+        font-weight: 700;
+        font-size: 4.5em;
+        color: #01586c;
+        line-height: 1.2;
+      }
+
+      p {
         font-size: 1.2em;
-        border-radius: 2em;
+      }
+
+      form .error-msg {
+        font-size: 12px !important;
+        color: red;
+        display: none;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 40px;
+      }
+
+      form #send-email-btn {
+        width: fit-content;
+      }
+
+      form input#email {
+        border-radius: 12px;
+        flex: 1;
         border: none;
-        margin-top: 2em;
+        font-size: 16px;
+        padding: 28px 12px 18px 12px;
+        border: 1px solid #01586c;
+        width: 100%;
+      }
+
+      form .input-wrapper {
+        width: 75%;
+        margin-right: 10px;
+        position: relative;
+        /* background-color: red; */
+      }
+
+      form label {
+        position: absolute;
+        font-size: 16px;
+        left: 12px;
+        top: 24px;
+        pointer-events: none;
+        transition: all 0.1s ease-in;
+      }
+
+      .notice-wrapper button {
+        color: rgb(255, 255, 255);
+        padding: 24px 14px 24px 14px;
+        font-size: 1.2em;
+        border-radius: 12px;
+        border: none;
         cursor: pointer;
         background-color: rgb(3, 169, 158);
       }
 
-      .banner-text button:focus {
+      .notice-wrapper button:focus,
+      #email:focus {
         outline: 2px dashed #fff;
         outline-offset: 5px;
+      }
+
+      .notice-wrapper button:hover {
+        background-color: rgb(3, 169, 158);
       }
 
       .section {
@@ -237,7 +366,7 @@
         height: 100%;
       }
 
-      .banner-text-img-section {
+      .notice-wrapper-img-section {
         padding: 2em 1em;
         box-shadow: -20px 0 20px rgba(0, 0, 0, 0.413);
         border-radius: 2em 0 0 2em;
@@ -253,17 +382,163 @@
         z-index: -1;
       }
 
+      .media-links {
+        display: flex;
+        width: 100%;
+      }
+
+      .media-links a {
+        margin-right: 24px;
+        color: #01586c;
+        font-size: 24px;
+      }
 
       @media all and (max-width: 960px) {
-        .banner-text button {
+        #coming-soon-section {
+          grid-template-rows: 100%;
+          height: 80%;
+          width: 80%;
+          box-shadow: none;
+        }
+
+        .notice-wrapper button {
           width: 240px;
         }
 
+        .notice-wrapper-img-section {
+          box-shadow: none;
+        }
+
+        .notice-wrapper {
+          grid-column: 1 / span 5;
+        }
+
+        #brand-image-wrapper {
+          display: none;
+        }
+
+        form {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        form #send-email-btn {
+          width: fit-content;
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        form .input-wrapper {
+          width: 100%;
+        }
       }
+
+      @media all and (max-width: 768px) {
+        #coming-soon-section {
+          grid-template-rows: 100%;
+          height: 100%;
+          width: 100%;
+          box-shadow: none;
+        }
+
+        .notice-wrapper button {
+          width: 240px;
+        }
+
+        .notice-wrapper-img-section {
+          box-shadow: none;
+        }
+
+        .notice-wrapper {
+          grid-column: 1 / span 5;
+        }
+
+        #brand-image-wrapper {
+          display: none;
+        }
+
+        form {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        form #send-email-btn {
+          width: fit-content;
+          margin-top: 20px;
+          width: 100%;
+        }
+
+        form .input-wrapper {
+          width: 100%;
+        }
+      }
+
+      @media all and (max-height: 768px) {
+        html {
+          background-color: #fff;
+        }
+
+        #coming-soon-section {
+          /* height: auto; */
+          border-radius: 0 !important;
+        }
+
+        .notice-wrapper {
+          border-radius: 0;
+        }
+
+        .media-links {
+          margin-top: 40px;
+        }
+
+        .logo {
+          margin-bottom: 40px;
+        }
+
+        body,
+        #coming-soon-section,
+        html,
+        .main {
+          overflow-y: auto;
+        }
+
+      }
+  
     </style>
     </section>
   </main>
-  <script src="./js/main.js" defer></script>
+ 
+   
+    <script>
+      const emalInput = document.querySelector('form input#email');
+      const inputLabel = document.querySelector('form label');
+      const form = document.querySelector('form[name="email-form"]');
+      const errorMsg = document.querySelector('.error-msg');
+  
+      emalInput.addEventListener('focus', function () {
+        inputLabel.style.top = '10px';
+        inputLabel.style.fontSize = '12px';
+      });
+      emalInput.addEventListener('blur', function () {
+        repositionLabel();
+      });
+      const repositionLabel = () => {
+        if (!emalInput.value) {
+          inputLabel.style.top = '24px';
+          inputLabel.style.fontSize = '16px';
+          return;
+        }
+      }
+  
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.checkValidity() && emalInput.value !== '') {
+          form.submit();
+          return emalInput.value = '';
+        };
+        return errorMsg.style.display = 'block';
+      })
+    </script>
 </body>
 
 </html>

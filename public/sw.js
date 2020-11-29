@@ -1,11 +1,5 @@
 const filesToCache = [
-  '/',
-  'index.html',
-  './privacy-policy.html',
-  './terms-of-service.html',
-  './get-app.html',
-  'css/privacy.css',
-  'js/main.js',
+  // 'css/privacy.css',
   'css/all.css',
   'js/wow.min.js',
   './favicon.ico',
@@ -22,57 +16,29 @@ const filesToCache = [
   'img/phone.svg',
   'img/logo.svg',
   'img/bg-img.webp',
-  'manifest.json',
-  // 'webfonts/fa-solid-900.eot',
-  // 'webfonts/fa-solid-900.svg',
-  // 'webfonts/fa-solid-900.ttf',
-  // 'webfonts/fa-solid-900.woff',
+  'img/leaf.svg',
   'webfonts/fa-solid-900.woff2',
   'webfonts/fa-brands-400.woff2'
 ];
 
-const staticCacheName = 'wastecoin-cache-v1';
+const cacheName = 'wastecoin-cache-v1';
 
 self.addEventListener('install', event => {
-  // console.log('Attempting to install service worker and cache static assets');
-  self.skipWaiting();
+  console.log('Attempting to install service worker and cache static assets');
   event.waitUntil(
-    caches.open(staticCacheName)
+    caches.open(cacheName)
       .then(cache => {
-        return cache.addAll(filesToCache);
+        cache.addAll(filesToCache)
+          .then(() => console.log('files added'))
+          .catch(error => console.log(error))
       })
-  );
-});
-
-self.addEventListener('fetch', event => {
-  console.log('Fetch event for ', event.request.url);
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          // console.log('Found ', event.request.url, ' in cache');
-          return response;
-        }
-        // console.log('Network request for ', event.request.url);
-        return fetch(event.request)
-
-          .then(response => {
-            return caches.open(staticCacheName).then(cache => {
-              cache.put(event.request.url, response.clone());
-              return response;
-            });
-          });
-
-      }).catch(error => {
-        //offline page
-      })
+      .catch(error => console.log(error))
   );
 });
 
 self.addEventListener('activate', event => {
   // console.log('Activating new service worker...');
-  const cacheAllowlist = [staticCacheName];
-
+  const cacheAllowlist = [cacheName];
   self.skipWaiting();
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -83,6 +49,33 @@ self.addEventListener('activate', event => {
           }
         })
       );
+    })
+  );
+});
+
+self.addEventListener('fetch', function (event) {
+  event.respondWith(
+    // Try the cache
+    caches.match(event.request).then(function (response) {
+      // Fall back to network
+  
+      //  const asset = event.request.url.replace(event.currentTarget.location.origin,'')
+      //  if(filesToCache.includes(asset)){
+      //    console.log(asset, 'found')
+      //  }else if(filesToAlwaysRecache.includes(asset)){
+      //    console.log(asset, 'will be recached always')
+      //  }   
+      
+        return response || fetch(event.request)
+        .then(response=>{
+          // if(filesToAlwaysRecache.includes(asset)){
+          //   console.log(asset, 'will be recached always')
+          // }
+          // console.log(response)
+          return response
+        });
+    }).catch(function () {
+      return caches.match('/offline.html');
     })
   );
 });
