@@ -502,42 +502,68 @@
         }
 
       }
-  
     </style>
     </section>
   </main>
- 
-   
-    <script>
-      const emalInput = document.querySelector('form input#email');
-      const inputLabel = document.querySelector('form label');
-      const form = document.querySelector('form[name="email-form"]');
-      const errorMsg = document.querySelector('.error-msg');
-  
-      emalInput.addEventListener('focus', function () {
-        inputLabel.style.top = '10px';
-        inputLabel.style.fontSize = '12px';
-      });
-      emalInput.addEventListener('blur', function () {
-        repositionLabel();
-      });
-      const repositionLabel = () => {
-        if (!emalInput.value) {
-          inputLabel.style.top = '24px';
-          inputLabel.style.fontSize = '16px';
-          return;
-        }
+
+
+  <script>
+    const emalInput = document.querySelector('form input#email');
+    const inputLabel = document.querySelector('form label');
+    const form = document.querySelector('form[name="email-form"]');
+    const errorMsg = document.querySelector('.error-msg');
+    var data = new FormData(form);
+    const formData = new FormData();
+
+    emalInput.addEventListener('focus', function () {
+      inputLabel.style.top = '10px';
+      inputLabel.style.fontSize = '12px';
+    });
+    emalInput.addEventListener('blur', function () {
+      repositionLabel();
+    });
+    const repositionLabel = () => {
+      if (!emalInput.value) {
+        inputLabel.style.top = '24px';
+        inputLabel.style.fontSize = '16px';
+        return;
       }
-  
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (form.checkValidity() && emalInput.value !== '') {
-          form.submit();
-          return emalInput.value = '';
-        };
-        return errorMsg.style.display = 'block';
-      })
-    </script>
+    }
+
+    
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.checkValidity() && emalInput.value !== '') {
+        formData.append('email', emalInput.value);
+        postEmail('https://wastecoinmvp.herokuapp.com/email_collector', formData)
+        // emalInput.value = '';
+        return;
+      };
+      return errorMsg.style.display = 'block';
+    })
+
+    //https://wastecoinmvp.herokuapp.com/email_collector
+
+
+     function postEmail(url = '', data) {
+       console.log(data)
+      fetch(url, {
+          method: 'POST',
+          mode: 'no-cors', // no-cors, *cors, same-origin
+          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: 'same-origin', // include, *same-origin, omit
+          body: data
+        })
+        .then(response => response.json())
+        .then(result => {
+          console.log('Success:', result);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });    
+
+    }
+  </script>
 </body>
 
 </html>

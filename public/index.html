@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Waste collection and recovery app where you get rewarded for proper waste disposal developed by WasteCoin Nigeria" />
   <title>WasteCoin Ng</title>
@@ -32,116 +32,147 @@
   <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
   <link rel="stylesheet" href="./css/style.css">
 
-<style>
-  /*!
+  <style>
+    /*!
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa,
-.fas,
-.far,
-.fal,
-.fad,
-.fab {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-}
+    .fa,
+    .fas,
+    .far,
+    .fal,
+    .fad,
+    .fab {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+    }
 
-.fa-instagram:before {content: "\f16d";}.fa-facebook:before {content: "\f09a";}.fa-facebook-f:before {
-  content: "\f39e";}.fa-facebook-messenger:before {content: "\f39f";}.fa-facebook-square:before {
-  content: "\f082";}.fa-twitter:before {content: "\f099";}.fa-linkedin:before {content: "\f08c";
-}.fa-linkedin-in:before {
-  content: "\f0e1";
-}
-.fa-envelope:before {
-  content: "\f0e0"; }
+    .fa-instagram:before {
+      content: "\f16d";
+    }
 
-.fa-bars:before {
-  content: "\f0c9"; }
+    .fa-facebook:before {
+      content: "\f09a";
+    }
 
-  .fa-times:before {
-  content: "\f00d"; }
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
+    .fa-facebook-f:before {
+      content: "\f39e";
+    }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-}
+    .fa-facebook-messenger:before {
+      content: "\f39f";
+    }
 
-@font-face {
-  font-family: 'Font Awesome 5 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("./webfonts/fa-brands-400.eot");
-  src: url("./webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-brands-400.woff2") format("woff2"), url("./webfonts/fa-brands-400.woff") format("woff"), url("./webfonts/fa-brands-400.ttf") format("truetype"), url("./webfonts/fa-brands-400.svg#fontawesome") format("svg");
-}
+    .fa-facebook-square:before {
+      content: "\f082";
+    }
 
-.fab {
-  font-family: 'Font Awesome 5 Brands';
-  font-weight: 400;
-}
+    .fa-twitter:before {
+      content: "\f099";
+    }
 
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("./webfonts/fa-regular-400.eot");
-  src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
-}
+    .fa-linkedin:before {
+      content: "\f08c";
+    }
 
-.far {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
-}
+    .fa-linkedin-in:before {
+      content: "\f0e1";
+    }
 
-@font-face {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("./webfonts/fa-solid-900.eot");
-  src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
-}
+    .fa-envelope:before {
+      content: "\f0e0";
+    }
 
-.fa,
-.fas {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-}
-</style>
+    .fa-bars:before {
+      content: "\f0c9";
+    }
+
+    .fa-times:before {
+      content: "\f00d";
+    }
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Brands';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("./webfonts/fa-brands-400.eot");
+      src: url("./webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-brands-400.woff2") format("woff2"), url("./webfonts/fa-brands-400.woff") format("woff"), url("./webfonts/fa-brands-400.ttf") format("truetype"), url("./webfonts/fa-brands-400.svg#fontawesome") format("svg");
+    }
+
+    .fab {
+      font-family: 'Font Awesome 5 Brands';
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+      src: url("./webfonts/fa-regular-400.eot");
+      src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
+    }
+
+    .far {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 5 Free';
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+      src: url("./webfonts/fa-solid-900.eot");
+      src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
+    }
+
+    .fa,
+    .fas {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+    }
+  </style>
 </head>
-   
+
 
 <body>
   <nav class="nav nav-style-dark">
     <div class="logo-section">
       <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p></a>
-      
+        <a href="./index.html" tabindex="1" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="wastecoin logo">
+          <p>WasteCoin</p>
+        </a>
+
       </div>
-      <div class="menu-icon"  tabindex="1" title="menu toggle">
+      <div class="menu-icon" tabindex="1" title="menu toggle">
         <span id="icon" class="fa fa-bars"></span>
       </div>
     </div>
@@ -160,58 +191,94 @@
       <div class="banner-text-img-section">
         <div class="banner-text" id="what-is-wasteCoin">
           <h1>Turn your waste <br> into Wealth</h1>
-          <p>Wastecoin pays you for every Waste processed via the app. <br> So with Wastecoin you earn while keeping your
+          <p>Wastecoin pays you for every Waste processed via the app. <br> So with Wastecoin you earn while keeping
+            your
             environment clean.</p>
-           <a href="./get-app.html" title="get the app">Get the App</a>
+          <a href="./get-app.html" title="get the app">Get the App</a>
         </div>
         <div class="banner-bg">
-          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.8558in" height="10.0793in" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 0.435319 0.445189"
- xmlns:xlink="http://www.w3.org/1999/xlink">
- <defs>
-  <style>
-    .fila {fill:url(#id0)}
-  </style>
-  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="0.185421" y1="0.344052" x2="0.257787" y2="0.116775">
-   <stop offset="0" style="stop-color:#0093DD"/>
-   <stop offset="1" style="stop-color:#38C8E8"/>
-  </linearGradient>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fila" d="M0.234429 0.00188622c-0.0553065,-0.0129373 -0.115004,0.0420127 -0.127522,0.119298 -0.0125173,0.0772855 -0.104028,0.0595724 -0.106838,0.133441 -0.00281063,0.0738689 0.0616602,0.0834145 0.108537,0.138513 0.0548191,0.0644334 0.155524,0.0787391 0.201453,-0.0131197 0.018333,-0.0366664 0.106031,-0.0249528 0.120961,-0.0801852 0.0149294,-0.0552324 -0.00892349,-0.0833342 -0.0728427,-0.14885 -0.0508491,-0.0521189 -0.0105779,-0.135255 -0.123748,-0.149098z"/>
- </g>
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="9.8558in" height="10.0793in"
+            style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 0.435319 0.445189" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <style>
+                .fila {
+                  fill: url(#id0)
+                }
+              </style>
+              <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="0.185421" y1="0.344052" x2="0.257787"
+                y2="0.116775">
+                <stop offset="0" style="stop-color:#0093DD" />
+                <stop offset="1" style="stop-color:#38C8E8" />
+              </linearGradient>
+            </defs>
+            <g id="Layer_x0020_1">
+              <metadata id="CorelCorpID_0Corel-Layer" />
+              <path class="fila"
+                d="M0.234429 0.00188622c-0.0553065,-0.0129373 -0.115004,0.0420127 -0.127522,0.119298 -0.0125173,0.0772855 -0.104028,0.0595724 -0.106838,0.133441 -0.00281063,0.0738689 0.0616602,0.0834145 0.108537,0.138513 0.0548191,0.0644334 0.155524,0.0787391 0.201453,-0.0131197 0.018333,-0.0366664 0.106031,-0.0249528 0.120961,-0.0801852 0.0149294,-0.0552324 -0.00892349,-0.0833342 -0.0728427,-0.14885 -0.0508491,-0.0521189 -0.0105779,-0.135255 -0.123748,-0.149098z" />
+            </g>
+          </svg>
           <img src="./img/bg-illustration.webp" alt=""></div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="19.9975in" height="9.02085in" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2.20589 0.995074"
- xmlns:xlink="http://www.w3.org/1999/xlink" class="banner-swirl">
- <defs>
-  <style>
-    .fil0 {fill:white}
-    </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="fil0" d="M1.07533 0.510667c-0.366996,-0.135852 -0.728654,-0.00508721 -1.07533,0.110536l0 0.373871 2.20589 0 0 -0.995074c-0.522274,0 -0.492259,0.746948 -1.13056,0.510667z"/>
- </g>
-</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="19.9975in" height="9.02085in"
+        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+        viewBox="0 0 2.20589 0.995074" xmlns:xlink="http://www.w3.org/1999/xlink" class="banner-swirl">
+        <defs>
+          <style>
+            .fil0 {
+              fill: white
+            }
+          </style>
+        </defs>
+        <g id="Layer_x0020_1">
+          <metadata id="CorelCorpID_0Corel-Layer" />
+          <path class="fil0"
+            d="M1.07533 0.510667c-0.366996,-0.135852 -0.728654,-0.00508721 -1.07533,0.110536l0 0.373871 2.20589 0 0 -0.995074c-0.522274,0 -0.492259,0.746948 -1.13056,0.510667z" />
+        </g>
+      </svg>
     </section>
     <!-- HOW IT WORKS SECTION STARTS -->
     <div id="how-it-works"></div>
+    <h2 class="heading wow fadeInUp">How it works</h2>
     <section class="section" id="how-it-works-section">
-      <h2 class="heading wow fadeInUp">How it works</h2>
-      <div class="steps">
-        <div class="wow bounceInUp">
-          <p class="step-number">1</p>
-          <div class="step-text-wrapper">
-            <div class="step-img"><img src="./img/art3.SVG" alt=""></div>
-            <h3 class="step-title">Onboard</h3>
-            <p class="step-description">Create an account and sign in </p>
+      <div class="steps-section">
+        <div class="step-wrapper step1">
+          <h3>Create Account</h3>
+          <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore consectetur excepturi
+            aliquam mollitia maiores dolorem quas accusamus minus odit, doloremque enim modi corrupti ut officia
+            expedita et error rem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, rerum.</p>
+        </div>
+      </div>
+
+      <div class="device-section">
+        <img src="./img/photo5.png" alt="">
+        <div class="device-bg"></div>
+        <!-- <div class="wow bounceInUp step">
+          <div class="step-image"><img src="./img/onepage-sampler.jpg" alt="" width="50%"></div>
+
+          <div class="step-text">
+            <h3 class="step-name">Create account</h3>
+            <p class="step-desc">Create an account and sign in </p>
           </div>
         </div>
-        <div class="wow bounceInUp">
+        <div class="wow bounceInUp step">
+          <div class="step-text">
+            <h3 class="step-name">Create account</h3>
+            <p class="step-desc">Create an account and sign in </p>
+          </div>
+          <div class="step-image"><img src="./img/onepage-sampler.jpg" alt="" width="50%"></div>
+        </div>
+        <div class="wow bounceInUp step">
+          <div class="step-image"><img src="./img/onepage-sampler.jpg" alt="" width="50%"></div>
+
+          <div class="step-text">
+            <h3 class="step-name">Create account</h3>
+            <p class="step-desc">Create an account and sign in </p>
+          </div>
+        </div> -->
+
+
+        <!-- <div class="wow bounceInUp">
           <p class="step-number">2</p>
           <div class="step-text-wrapper">
             <div class="step-img"><img src="./img/art2.SVG" alt=""></div>
@@ -228,28 +295,294 @@ viewBox="0 0 2.20589 0.995074"
             <p class="step-description">Get paid in WasteCoins in your wallet; accumulate and redeem in exchange for
               cash, data and recharge cards</p>
           </div>
-        </div>
+        </div> -->
         <!-- div.step>div.phone-wrapper+div.step-text-wrapper -->
       </div>
       <!-- <img src="./img/bg-img.webp" alt=""> -->
     </section>
+    <section class="section" id="how-it-works-section2">
+      <div class="device-section">
+        <img src="./img/photo3.png" alt="">
+        <div class="device-bg"></div>
+      </div>
+      <div class="steps-section">
+        <div class="step-wrapper step1">
+          <h3>Scan & deposit waste</h3>
+          <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore consectetur excepturi
+            aliquam mollitia maiores dolorem quas accusamus minus odit, doloremque enim modi corrupti ut officia
+            expedita et error rem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, rerum.</p>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="section" id="how-it-works-section3">
+
+      <div class="steps-section">
+        <div class="step-wrapper step1">
+          <h3>Recieve Wastecoins</h3>
+          <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore consectetur excepturi
+            aliquam mollitia maiores dolorem quas accusamus minus odit, doloremque enim modi corrupti ut officia
+            expedita et error rem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, rerum.</p>
+        </div>
+
+      </div>
+      <div class="device-section">
+        <img src="./img/photo1.png" alt="">
+        <div class="device-bg"></div>
+      </div>
+    </section>
+    <section class="section" id="how-it-works-section4">
+      <div class="device-section">
+        <img src="./img/photo2.png" alt="">
+        <div class="device-bg"></div>
+      </div>
+      <div class="steps-section">
+        <div class="step-wrapper step1">
+          <h3>Shop in Marketplace</h3>
+          <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore consectetur excepturi
+            aliquam mollitia maiores dolorem quas accusamus minus odit, doloremque enim modi corrupti ut officia
+            expedita et error rem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, rerum.</p>
+        </div>
+
+      </div>
+
+    </section>
+    <style>
+      .heading {
+        font-size: 3.5em;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: 700px;
+      }
+
+      .step:nth-of-type(even) {}
+
+      .step-image {
+        transform: rotate(30deg);
+      }
+
+      .step-name {
+        font-size: 2.5em;
+      }
+
+      .step-desc {
+        font-size: 1.5em;
+      }
+
+      #how-it-works-section,
+      #how-it-works-section2,
+      #how-it-works-section3,
+      #how-it-works-section4 {
+        display: grid;
+        grid-template-columns: 1fr 400px;
+        margin-bottom: 80px;
+        padding: 20px;
+      }
+
+      #how-it-works-section2,
+      #how-it-works-section4 {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+      }
+
+      #how-it-works-section .heading {
+        margin-bottom: 0.2em;
+        text-align: start;
+      }
+
+      #how-it-works-section h3,
+      #how-it-works-section2 h3,
+      #how-it-works-section3 h3,
+      #how-it-works-section4 h3 {
+        font-size: 32px;
+      }
+
+      #how-it-works-section2 .steps-section,
+      #how-it-works-section4 .steps-section {
+        grid-column: 2 / span 1;
+      }
+
+      .steps-section {
+        grid-column: 1 / span 1;
+        position: relative;
+        padding-bottom: 55px;
+      }
+
+      /* .steps-map {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .map {
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 3px solid #0093DD;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-right: 30px;
+      }
+
+      .map:nth-of-type(1)::after,
+      .map:nth-of-type(2)::after {
+        content: '';
+        width: 30px;
+        height: 5px;
+        background-color: #0093DD;
+        position: absolute;
+        left: 100%;
+      } */
+
+      .device-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .device-section img {
+        /* box-shadow: 10px 0 15px rgba(0, 0, 0, 0.222); */
+        border: 10px solid rgba(0, 0, 0, 0.085);
+      }
+
+      .device-bg {
+        height: 300px;
+        width: 300px;
+        background: linear-gradient(-45deg, #0093DD, green);
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+      }
+      @media all and (min-width: 1024px) {
+        #how-it-works-section,
+        #how-it-works-section2,
+        #how-it-works-section3,
+        #how-it-works-section4 {
+          padding: 1em 6em 1em 6em;
+        }
+
+      }
+      @media all and (max-width: 730px) {
+        .heading {
+          font-size: 2.2rem;
+        }
+
+        #how-it-works-section h3,
+        #how-it-works-section2 h3,
+        #how-it-works-section3 h3,
+        #how-it-works-section4 h3 {
+          font-size: 1.5rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1.3rem !important;
+        }
+
+        #how-it-works-section,
+        #how-it-works-section3 {
+          grid-template-columns: 1fr 150px;
+          position: relative;
+        }
+
+        #how-it-works-section2,
+        #how-it-works-section4 {
+          grid-template-columns: 150px 1fr;
+          position: relative;
+        }
+
+        .steps-section {
+          grid-column: 1 / span 1;
+          position: relative;
+        }
+
+        .device-section {
+          /* margin-right: -150px; */
+          position: absolute;
+          right: -100px;
+          top: 0;
+        }
+
+        #how-it-works-section2 .device-section,
+        #how-it-works-section4 .device-section {
+          position: absolute;
+          left: -105%;
+          top: 0;
+        }
+
+      }
+
+      @media all and (max-width: 425px) {
+
+        #how-it-works-section2,
+        #how-it-works-section4,
+        #how-it-works-section,
+        #how-it-works-section3 {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          margin-bottom:20px;
+        }
+        #how-it-works-section,
+        #how-it-works-section3{
+          flex-direction: column-reverse;
+        }
+
+        #how-it-works-section2 .device-section,
+        #how-it-works-section4 .device-section {
+          position: block;
+          top: 0;
+        }
+
+        .device-section {
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+          position: relative !important;
+          left: 0 !important;
+          margin-bottom: 20px;
+        }
+        .device-section img {
+          width: 50%;
+          border: none;
+        }
+        .device-bg{
+          width: 200%;
+          height: 200px;
+          border-radius:  50% 50% 0 0;
+        }
+      }
+    </style>
     <!-- HOW IT WORKS SECTION ENDS -->
     <!-- WHY WASTECOIN SECTION STARTS -->
     <div id="why-wasteCoin"></div>
     <section class="section" id="why-wastecoin-section">
-      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="19.9975in" height="6.32701in" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 2.02169 0.639642"
- xmlns:xlink="http://www.w3.org/1999/xlink"  class="why-section-swirl">
- <defs>
-  <style type="text/css">
-    .filc {fill:#3bd7f1}
-  </style>
- </defs>
- <g id="Layer_x0020_1">
-  <metadata id="CorelCorpID_0Corel-Layer"/>
-  <path class="filc" d="M0 0.0190962l0 0.571408 2.02169 0.0491384 -0.00421185 -0.324313c-0.296137,-0.1105 -0.638757,-0.0907203 -0.943455,-0.0350986 -0.416408,0.0760139 -0.724686,-0.377588 -1.07402,-0.261135z"/>
- </g>
-</svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="19.9975in" height="6.32701in"
+        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+        viewBox="0 0 2.02169 0.639642" xmlns:xlink="http://www.w3.org/1999/xlink" class="why-section-swirl">
+        <defs>
+          <style type="text/css">
+            .filc {
+              fill: #3bd7f1
+            }
+          </style>
+        </defs>
+        <g id="Layer_x0020_1">
+          <metadata id="CorelCorpID_0Corel-Layer" />
+          <path class="filc"
+            d="M0 0.0190962l0 0.571408 2.02169 0.0491384 -0.00421185 -0.324313c-0.296137,-0.1105 -0.638757,-0.0907203 -0.943455,-0.0350986 -0.416408,0.0760139 -0.724686,-0.377588 -1.07402,-0.261135z" />
+        </g>
+      </svg>
       <div class="section-content">
         <h2 class="heading  wow fadeInUp">Why WasteCoin?</h2>
         <div class="content-wrapper">
@@ -289,17 +622,21 @@ viewBox="0 0 2.02463 0.547496"
  </g>
 </svg> -->
   <footer class="footer">
-  
+
     <div class="footer-content-wrapper" id="contact">
       <div class="footer-content">
         <div class="contact">
           <header class="footer-header">Connect with us</header>
           <p class="social-media">
-            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email" class="email"><span class="fas fa-envelope"></span></a>
-              <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
-              <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer" title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
-              <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer" title="contact us on instagram"><span class="fab fa-instagram"></span></a>
-            </p>
+            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
+              class="email"><span class="fas fa-envelope"></span></a>
+            <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer"
+              title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
+            <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer"
+              title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
+            <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer"
+              title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+          </p>
         </div>
         <!-- <div class="sitemap">
           <a href="index.html#why-wasteCoin" title="why wastecoin">Why WasteCoin</a>
@@ -318,15 +655,15 @@ viewBox="0 0 2.02463 0.547496"
   <script>
     new WOW().init();
     window.addEventListener('load', () => {
-  //register service worker
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg, reg.scope);
-      });
-  }
-})
-</script>
+      //register service worker
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg, reg.scope);
+          });
+      }
+    })
+  </script>
   <script src="./js/main.js" defer></script>
 
 
