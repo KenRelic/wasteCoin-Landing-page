@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Waste collection and recovery app where you get rewarded for proper waste disposal developed by WasteCoin Nigeria" />
-  <title>WasteCoin Ng</title>
+  <title>WasteCoin</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#000d10">
   <meta name="apple-mobile-web-app-title" content="WasteCoin Nigeria website">
@@ -29,11 +29,23 @@
   <meta name="msapplication-TileColor" content="#000d10">
   <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- <link rel="preload" href="css/animate.css" as="style"> -->
+  <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+  /> -->
   <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="preload" href="./css/style.css" as="style"> -->
+  <link rel="preload" href="fonts/Poppins-ExtraBold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Poppins-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <style>
-    /*!
+    /*! GRAB FONT FAST 
  * Font Awesome Free 5.14.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
@@ -60,28 +72,12 @@
       content: "\f09a";
     }
 
-    .fa-facebook-f:before {
-      content: "\f39e";
-    }
-
-    .fa-facebook-messenger:before {
-      content: "\f39f";
-    }
-
-    .fa-facebook-square:before {
-      content: "\f082";
-    }
-
     .fa-twitter:before {
       content: "\f099";
     }
 
     .fa-linkedin:before {
       content: "\f08c";
-    }
-
-    .fa-linkedin-in:before {
-      content: "\f0e1";
     }
 
     .fa-envelope:before {
@@ -94,27 +90,6 @@
 
     .fa-times:before {
       content: "\f00d";
-    }
-
-    .sr-only {
-      border: 0;
-      clip: rect(0, 0, 0, 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto;
     }
 
     @font-face {
@@ -140,11 +115,6 @@
       src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
     }
 
-    .far {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 400;
-    }
-
     @font-face {
       font-family: 'Font Awesome 5 Free';
       font-style: normal;
@@ -166,18 +136,16 @@
 <body>
   <nav class="nav nav-style-dark">
     <div class="logo-section">
-      <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="wastecoin logo">
+      <div class="logo bounceInUp">
+        <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="wastecoin logo">
           <p>WasteCoin</p>
         </a>
-
       </div>
-      <div class="menu-icon" tabindex="1" title="menu toggle">
+      <div class="menu-icon" tabindex="0" title="menu toggle">
         <span id="icon" class="fa fa-bars"></span>
       </div>
     </div>
     <div class="menu-items-section">
-      <!-- <a href="#home" title="Home">Home</a> -->
       <a href="#how-it-works" title="How it works">How it works</a>
       <a href="#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
       <a href="#contact" title="contact us">Contact Us</a>
@@ -191,7 +159,7 @@
       <div class="banner-text-img-section">
         <div class="banner-text" id="what-is-wasteCoin">
           <h1>Turn your waste <br> into Wealth</h1>
-          <p>WasteCoin is a mobile application that helps to convert everyone's houdehold recycling efforts into a
+          <p>WasteCoin is a mobile application that helps to convert everyone's household recycling efforts into a
             currency that can be redeemed on the app marketplace</p>
           <a href="./get-app.html" title="get the app">Get the App</a>
         </div>
@@ -217,276 +185,67 @@
                 d="M0.234429 0.00188622c-0.0553065,-0.0129373 -0.115004,0.0420127 -0.127522,0.119298 -0.0125173,0.0772855 -0.104028,0.0595724 -0.106838,0.133441 -0.00281063,0.0738689 0.0616602,0.0834145 0.108537,0.138513 0.0548191,0.0644334 0.155524,0.0787391 0.201453,-0.0131197 0.018333,-0.0366664 0.106031,-0.0249528 0.120961,-0.0801852 0.0149294,-0.0552324 -0.00892349,-0.0833342 -0.0728427,-0.14885 -0.0508491,-0.0521189 -0.0105779,-0.135255 -0.123748,-0.149098z" />
             </g>
           </svg>
-          <img src="./img/bg-illustration.webp" alt=""></div>
+          <img src="./img/bg-illustration.webp" alt="people disposing waste"></div>
       </div>
       <style>
-        .banner-text-img-section {
-          border-radius: 0 0 90% 0;
-          padding-bottom: 60px;
-          margin-bottom: 0;
-        }
-
-        #how-it-works {
-          margin-bottom: 60px;
-          margin-top: 0;
-        }
+       
       </style>
     </section>
     <!-- HOW IT WORKS SECTION STARTS -->
     <div id="how-it-works"></div>
     <h2 class="heading wow fadeInUp">How it works</h2>
     <section class="section" id="how-it-works-section">
-      <div class="steps-section">
+      <div class="steps-section wow fadeInLeft">
         <div class="step-wrapper step1">
           <h3>Create Account</h3>
           <p class="step-desc">Get the wastecoin app installed and create an account. The process is easy and straightforward. Set up your profile and add your account details, also a unique password to withdraw your wastecoins</p>
         </div>
       </div>
-
-      <div class="device-section">
-        <img src="./img/photo5.png" alt="">
+      <div class="device-section wow fadeInLeft">
+        <img src="./img/photo5.png" alt="create account screen">
         <div class="device-bg"></div>
       </div>
     </section>
+
     <section class="section" id="how-it-works-section2">
-      <div class="device-section">
-        <img src="./img/photo3.png" alt="">
+      <div class="device-section wow fadeInRight">
+        <img src="./img/photo3.png" alt="scan barcode screen">
         <div class="device-bg"></div>
       </div>
-      <div class="steps-section">
+      <div class="steps-section wow fadeInRight">
         <div class="step-wrapper step1">
           <h3>Scan & deposit waste</h3>
-          <p class="step-desc">Scan the QR code of any recycleable waste. If it has no QR code - Not to worry, take the recycleable to the waste collection hub provided to redeem your wastecoin.</p>
+          <p class="step-desc">Scan the barcode of any recycleable waste. If it has no barcode - don't worry, take the recycleable to the waste collection hub provided to redeem your wastecoin.</p>
         </div>
-
       </div>
-
     </section>
+    
     <section class="section" id="how-it-works-section3">
-
-      <div class="steps-section">
+      <div class="steps-section wow fadeInLeft">
         <div class="step-wrapper step1">
           <h3>Recieve Wastecoins</h3>
           <p class="step-desc">Get your wallet instantly credited with wastecoins after each scan. Our wastecoin wallet is secure and always available to you 24/7</p>
         </div>
-
       </div>
-      <div class="device-section">
-        <img src="./img/photo1.png" alt="">
+      <div class="device-section wow fadeInLeft">
+        <img src="./img/photo1.png" alt="Credited wastecoin wallet">
         <div class="device-bg"></div>
       </div>
     </section>
+
     <section class="section" id="how-it-works-section4">
-      <div class="device-section">
-        <img src="./img/photo2.png" alt="">
+      <div class="device-section wow fadeInRight">
+        <img src="./img/photo2.png" alt="WasteCoin app marketplace">
         <div class="device-bg"></div>
       </div>
-      <div class="steps-section">
+      <div class="steps-section wow fadeInRight">
         <div class="step-wrapper step1">
           <h3>Shop in Marketplace</h3>
           <p class="step-desc">Buy various categories of products from the wasteCoin Marketplace with ease and pay with your available wastecoin. It's easy to navigate and the products are all of great quality.</p>
         </div>
-
       </div>
-
     </section>
-    <style>
-   
-      .heading {
-        font-size: 3.5em;
-      }
 
-      .step {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row: 700px;
-      }
-
-      .step:nth-of-type(even) {}
-
-      .step-image {
-        transform: rotate(30deg);
-      }
-
-      .step-name {
-        font-size: 2.5em;
-      }
-
-      .step-desc {
-        font-size: 1.5em;
-      }
-
-      #how-it-works-section,
-      #how-it-works-section2,
-      #how-it-works-section3,
-      #how-it-works-section4 {
-        display: grid;
-        grid-template-columns: 1fr 400px;
-        margin-bottom: 80px;
-        padding: 20px;
-        overflow: hidden;
-        color: #333;
-      }
-      #how-it-works-section p,
-      #how-it-works-section2 p,
-      #how-it-works-section3 p,
-      #how-it-works-section4 p{
-        color: #555;
-      }
-      #how-it-works-section2,
-      #how-it-works-section4 {
-        display: grid;
-        grid-template-columns: 400px 1fr;
-      }
-
-      #how-it-works-section .heading {
-        margin-bottom: 0.2em;
-        text-align: start;
-      }
-
-      #how-it-works-section h3,
-      #how-it-works-section2 h3,
-      #how-it-works-section3 h3,
-      #how-it-works-section4 h3 {
-        font-size: 32px;
-      }
-
-      #how-it-works-section2 .steps-section,
-      #how-it-works-section4 .steps-section {
-        grid-column: 2 / span 1;
-      }
-
-      .steps-section {
-        grid-column: 1 / span 1;
-        position: relative;
-        padding-bottom: 55px;
-      }
-
-
-      .device-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-
-      .device-section img {
-        border: 10px solid rgba(0, 0, 0, 0.085);
-      }
-
-      .device-bg {
-        height: 300px;
-        width: 300px;
-        background: linear-gradient(-45deg, #2effb6, #00d0ff);
-        border-radius: 50%;
-        position: absolute;
-        z-index: -1;
-      }
-
-      @media all and (min-width: 1024px) {
-
-        #how-it-works-section,
-        #how-it-works-section2,
-        #how-it-works-section3,
-        #how-it-works-section4 {
-          padding: 1em 6em 1em 6em;
-        }
-
-      }
-
-      @media all and (max-width: 730px) {
-        .heading {
-          font-size: 2.2rem;
-        }
-
-        #how-it-works-section h3,
-        #how-it-works-section2 h3,
-        #how-it-works-section3 h3,
-        #how-it-works-section4 h3 {
-          font-size: 1.5rem;
-          margin-bottom: 10px;
-        }
-
-        p {
-          font-size: 1.2rem !important;
-        }
-
-        #how-it-works-section,
-        #how-it-works-section3 {
-          grid-template-columns: 1fr 150px;
-          position: relative;
-        }
-
-        #how-it-works-section2,
-        #how-it-works-section4 {
-          grid-template-columns: 150px 1fr;
-          position: relative;
-        }
-
-        .steps-section {
-          grid-column: 1 / span 1;
-          position: relative;
-        }
-
-        .device-section {
-          position: absolute;
-          right: -100px;
-          top: 0;
-        }
-
-        #how-it-works-section2 .device-section,
-        #how-it-works-section4 .device-section {
-          position: absolute;
-          left: -105%;
-          top: 0;
-        }
-
-      }
-
-      @media all and (max-width: 425px) {
-
-        #how-it-works-section2,
-        #how-it-works-section4,
-        #how-it-works-section,
-        #how-it-works-section3 {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          margin-bottom: 20px;
-        }
-
-        #how-it-works-section,
-        #how-it-works-section3 {
-          flex-direction: column-reverse;
-        }
-
-        #how-it-works-section2 .device-section,
-        #how-it-works-section4 .device-section {
-          position: block;
-          top: 0;
-        }
-
-        .device-section {
-          display: flex !important;
-          justify-content: center;
-          align-items: center;
-          position: relative !important;
-          left: 0 !important;
-          margin-bottom: 20px;
-        }
-
-        .device-section img {
-          width: 50%;
-          border: none;
-        }
-
-        .device-bg {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-        }
-      }
-    </style>
     <!-- HOW IT WORKS SECTION ENDS -->
     <!-- WHY WASTECOIN SECTION STARTS -->
     <div id="why-wasteCoin"></div>
@@ -499,52 +258,24 @@
             <h3 class="step-title">Transparent e-wallet</h3>
             <p>Enjoy access to your WasteCoin wallet 24/7</p>
           </div>
-          <div class="content  wow fadeInUp">
+          <div class="content  wow fadeInUp" data-wow-delay = "0.3s">
             <div class="icon-wrapper"><img src="./img/money.SVG" alt=""></div>
             <h3 class="step-title">Passive income</h3>
             <p>Earn from your waste</p>
           </div>
-          <div class="content  wow fadeInUp">
+          <div class="content  wow fadeInUp"  data-wow-delay = "0.6s">
             <div class="icon-wrapper"><img src="./img/world.SVG" alt=""></div>
             <h3 class="step-title">Safer Ecosystem</h3>
             <p>Be part of a global innitiative to preserve the environment and ecosystem</p>
           </div>
         </div>
-        <a href="./get-app.html" class="wow fadeInUp get-app-btn" title="get started">Get Started</a>
+        <a href="./get-app.html" class="wow fadeInUp get-app-btn" data-wow-delay = "0.5s" title="get started">Get Started</a>
       </div>
-      <style>
-        .why-wastecoin {
-          border-radius: 0 40% 0 0;
-          padding-top: 90px !important;
-        }
 
-        @media all and (max-width: 767px) {
-          .why-wastecoin {
-            border-radius: 0 30% 0 0;
-            padding-top: 0px !important;
-          }
-
-          .banner-text-img-section {
-            border-radius: 0 0 50% 0;
-          }
-        }
-
-        @media all and (max-width: 700px) {
-          .why-wastecoin {
-            border-radius: 0 100px 0 0;
-            padding-top: 30px !important;
-          }
-
-          .banner-text-img-section {
-            border-radius: 0 0 100px 0;
-          }
-        }
-      </style>
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
   <footer class="footer">
-
     <div class="footer-content-wrapper" id="contact">
       <div class="footer-content">
         <div class="contact">

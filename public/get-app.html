@@ -58,14 +58,6 @@
       content: "\f09a";
     }
 
-    .fa-facebook-f:before {
-      content: "\f39e";
-    }
-
-    .fa-facebook-messenger:before {
-      content: "\f39f";
-    }
-
     .fa-facebook-square:before {
       content: "\f082";
     }
@@ -78,42 +70,6 @@
       content: "\f08c";
     }
 
-    .fa-linkedin-in:before {
-      content: "\f0e1";
-    }
-
-    .fa-bars:before {
-      content: "\f0c9";
-    }
-
-    .fa-times:before {
-      content: "\f00d";
-    }
-
-    .fa-envelope:before {
-      content: "\f0e0";
-    }
-
-    .sr-only {
-      border: 0;
-      clip: rect(0, 0, 0, 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto;
-    }
 
     @font-face {
       font-family: 'Font Awesome 5 Brands';
@@ -138,10 +94,6 @@
       src: url("./webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-regular-400.woff2") format("woff2"), url("./webfonts/fa-regular-400.woff") format("woff"), url("./webfonts/fa-regular-400.ttf") format("truetype"), url("./webfonts/fa-regular-400.svg#fontawesome") format("svg");
     }
 
-    .far {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 400;
-    }
 
     @font-face {
       font-family: 'Font Awesome 5 Free';
@@ -150,12 +102,6 @@
       font-display: block;
       src: url("./webfonts/fa-solid-900.eot");
       src: url("./webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./webfonts/fa-solid-900.woff2") format("woff2"), url("./webfonts/fa-solid-900.woff") format("woff"), url("./webfonts/fa-solid-900.ttf") format("truetype"), url("./webfonts/fa-solid-900.svg#fontawesome") format("svg");
-    }
-
-    .fa,
-    .fas {
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
     }
   </style>
 </head>
@@ -560,7 +506,6 @@
       e.preventDefault();
       if (form.checkValidity() && emalInput.value !== '') {
         emailData = emalInput.value;
-        showSentEmailConfirmationModal();
         return postEmail('https://wastecoinmvp.herokuapp.com/email_collector', { "email": `${emailData}` });
       };
       return errorMsg.style.display = 'block';
@@ -580,8 +525,7 @@
           }
         });
         let status = await response.status;
-        if(status === 200) return showSentEmailConfirmationModal();
-        
+        if(status === 200) return showSentEmailConfirmationModal();        
       } catch (err) {
         console.log(err);
       }
