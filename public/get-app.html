@@ -189,16 +189,21 @@
           </form>
         </div>
         <div class="media-links">
-          <a href="https://www.facebook.com/wastecoinng" target="_blank" rel="noreferrer"
+          <a href="https://www.facebook.com/wastecoins" target="_blank" rel="noreferrer"
             title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
-          <a href="https://www.twitter.com/WasteCoinNG" target="_blank" rel="noreferrer"
+          <a href="https://www.twitter.com/wastecoins" target="_blank" rel="noreferrer"
             title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
-          <a href="https://www.instagram.com/wastecoinng" target="_blank" rel="noreferrer"
+          <a href="https://www.instagram.com/wastecoins" target="_blank" rel="noreferrer"
             title="contact us on instagram"><span class="fab fa-instagram"></span></a>
         </div>
       </div>
       <div id="brand-image-wrapper">
         <!-- <img src="./img/phone.svg" alt=""> -->
+        <div class="email-sent-wrapper">
+          <h2>Thanks</h2>
+          <p>Your email has been added to the waiting list. You will be notified when the app is launched.</p>
+
+        </div>
       </div>
     </section>
     <style>
@@ -251,13 +256,20 @@
       #brand-image-wrapper {
         grid-column: 4 / span 2;
         background-color: #01586c;
-        background-color: #01dec4;
+        /* background-color: #01dec4; */
         background-image: url('./img/leaf.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-blend-mode: multiply;
         height: 100%;
         grid-row: auto;
+        transition: all 0.3s ease-in;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
       }
 
       .notice-wrapper {
@@ -266,9 +278,24 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         justify-content: space-between;
         padding: 24px;
+        /* width: 0; */
+      }
+
+      .email-sent-wrapper {
+        display: none;
+      }
+
+      #brand-image-wrapper h2 {
+        font-size: 4rem;
+        font-family: 'Poppins-bold', sans-serif;
+        color: #01dec4;
+        ;
+      }
+
+      #brand-image-wrapper p {
+        color: #fff;
       }
 
       .notice-wrapper h1 {
@@ -278,10 +305,6 @@
       .notice-wrapper p {
         color: #01586c;
         margin-top: 1em;
-      }
-
-      .notice-wrapper p:nth-of-type(2) {
-        /* font-weight: bold; */
       }
 
       h1 {
@@ -327,7 +350,6 @@
         width: 75%;
         margin-right: 10px;
         position: relative;
-        /* background-color: red; */
       }
 
       form label {
@@ -346,7 +368,9 @@
         border-radius: 12px;
         border: none;
         cursor: pointer;
-        background-color: rgb(3, 169, 158);
+        background-color: #01dec4;
+        text-overflow: ellipsis;
+        word-wrap: normal;
       }
 
       .notice-wrapper button:focus,
@@ -356,7 +380,7 @@
       }
 
       .notice-wrapper button:hover {
-        background-color: rgb(3, 169, 158);
+        background-color: #01dec4;
       }
 
       .section {
@@ -377,7 +401,6 @@
         width: 200%;
         height: 100%;
         margin-right: -6em;
-        /* right: -9em; */
         position: absolute;
         z-index: -1;
       }
@@ -512,8 +535,11 @@
     const inputLabel = document.querySelector('form label');
     const form = document.querySelector('form[name="email-form"]');
     const errorMsg = document.querySelector('.error-msg');
-    var data = new FormData(form);
-    const formData = new FormData();
+    var emailData = "";
+
+    const brandImgWrapper = document.getElementById('brand-image-wrapper');
+    const noticeWrapper = document.querySelector('.notice-wrapper');
+    const emailSentWrapper = document.querySelector('.email-sent-wrapper');
 
     emalInput.addEventListener('focus', function () {
       inputLabel.style.top = '10px';
@@ -527,42 +553,46 @@
         inputLabel.style.top = '24px';
         inputLabel.style.fontSize = '16px';
         return;
-      }
-    }
+      };
+    };
 
-    
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (form.checkValidity() && emalInput.value !== '') {
-        formData.append('email', emalInput.value);
-        postEmail('https://wastecoinmvp.herokuapp.com/email_collector', formData)
-        // emalInput.value = '';
-        return;
+        emailData = emalInput.value;
+        showSentEmailConfirmationModal();
+        return postEmail('https://wastecoinmvp.herokuapp.com/email_collector', { "email": `${emailData}` });
       };
       return errorMsg.style.display = 'block';
     })
 
-    //https://wastecoinmvp.herokuapp.com/email_collector
-
-
-     function postEmail(url = '', data) {
-       console.log(data)
-      fetch(url, {
+    async function postEmail(url = '', data) {
+      try {
+        let response = await fetch(url, {
           method: 'POST',
-          mode: 'no-cors', // no-cors, *cors, same-origin
+          mode: 'cors', // no-cors, *cors, same-origin
           cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
           credentials: 'same-origin', // include, *same-origin, omit
-          body: data
-        })
-        .then(response => response.json())
-        .then(result => {
-          console.log('Success:', result);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });    
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+            // "Accept": 'application/json',
+          }
+        });
+        let status = await response.status;
+        if(status === 200) return showSentEmailConfirmationModal();
+        
+      } catch (err) {
+        console.log(err);
+      }
+    };
 
-    }
+    function showSentEmailConfirmationModal() {
+      emailSentWrapper.style.display = 'block';
+      brandImgWrapper.style.gridColumn = '1 / span 5';
+      brandImgWrapper.style.display = 'flex';
+      noticeWrapper.style.display = 'none';
+    };
   </script>
 </body>
 

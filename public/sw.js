@@ -1,21 +1,16 @@
 const filesToCache = [
-  // 'css/privacy.css',
   'css/all.css',
   'js/wow.min.js',
   './favicon.ico',
   'img/bg1.SVG',
-  'img/art1.SVG',
-  'img/art2.SVG',
-  'img/art3.SVG',
-  'img/art4.SVG',
-  'img/wallet.svg',
-  'img/flow1.svg',
-  'img/flow2.SVG',
-  'img/flow3.SVG',
+  'img/photo1.png',
+  'img/photo2.PNG',
+  'img/photo3.PNG',
+  'img/photo4.PNG',
+  'img/photo5.PNG',
+  // 'img/wallet.svg',
   'img/bg-illustration.webp',
-  'img/phone.svg',
   'img/logo.svg',
-  'img/bg-img.webp',
   'img/leaf.svg',
   'webfonts/fa-solid-900.woff2',
   'webfonts/fa-brands-400.woff2'
@@ -37,7 +32,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  // console.log('Activating new service worker...');
+  console.log('Activating new service worker...');
   const cacheAllowlist = [cacheName];
   self.skipWaiting();
   event.waitUntil(
