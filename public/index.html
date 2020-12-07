@@ -134,15 +134,13 @@
 
 
 <body>
-  <nav class="nav nav-style-dark">
+    <!-- Desktop nav bar -->
+  <nav class="nav nav-style-dark"  id="nav-desktop">
     <div class="logo-section">
-      <div class="logo bounceInUp">
+      <div class="logo">
         <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
           <p>WasteCoin</p>
         </a>
-      </div>
-      <div class="menu-icon" tabindex="0" title="menu toggle">
-        <span id="icon" class="fa fa-bars"></span>
       </div>
     </div>
     <div class="menu-items-section">
@@ -152,15 +150,32 @@
       <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
     </div>
   </nav>
-
+  <!-- Mobile nav bar -->
+  <nav class="nav nav-style-dark" id="nav-mobile">
+    <div class="logo-section">
+      <div class="logo">
+        <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
+          <p>WasteCoin</p>
+        </a>
+      </div>
+      <div class="menu-icon" tabindex="0" title="menu toggle">
+        <span id="icon" class="fa fa-bars"></span>
+      </div>
+    </div>
+    <div class="menu-items-section-mobile">
+      <a href="#how-it-works" title="How it works">How it works</a>
+      <a href="#why-wasteCoin" title="Why WasteCoin">Why WasteCoin</a>
+      <a href="#contact" title="contact us">Contact Us</a>
+      <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
+    </div>
+  </nav>
   <main class="main">
     <div id="home"></div>
     <section class="section" id="banner">
       <div class="banner-text-img-section">
         <div class="banner-text" id="what-is-wasteCoin">
-          <h1>Turn your waste <br> into Wealth</h1>
-          <p>WasteCoin is a mobile application that helps to convert everyone's household recycling efforts into a
-            currency that can be redeemed on the app marketplace</p>
+          <h1>Turn Your Waste <br> Into Wealth</h1>
+          <p>Introducing WasteCoin - a smart mobile app that acts as the digital bank for your household recyclable waste, turning your waste into wealth.</p>
           <a href="./get-app.html" title="get the app">Get the App</a>
         </div>
         <div class="banner-bg">
@@ -198,7 +213,7 @@
       <div class="steps-section wow fadeInLeft">
         <div class="step-wrapper step1">
           <h3>Create Account</h3>
-          <p class="step-desc">Get the WasteCoin app installed and create an account. The process is easy and straightforward. Set up your profile and add your account details, also a unique password to withdraw your WasteCoins</p>
+          <p class="step-desc">Get the WasteCoin app installed and create an account. The process is easy and straightforward. Set up your profile and add your account details, also a unique password to withdraw your WasteCoins.</p>
         </div>
       </div>
       <div class="device-section wow fadeInLeft">
@@ -215,7 +230,7 @@
       <div class="steps-section wow fadeInRight">
         <div class="step-wrapper step1">
           <h3>Scan & deposit waste</h3>
-          <p class="step-desc">Scan the barcode of any recycleable plastic. If it has no barcode - don't worry, just make a request and we will add it to our database.</p>
+          <p class="step-desc">Scan the barcode of any recyclable waste. If it has no barcode - don't worry, just make a request and we will add it to our database.</p>
         </div>
       </div>
     </section>
@@ -224,7 +239,7 @@
       <div class="steps-section wow fadeInLeft">
         <div class="step-wrapper step1">
           <h3>Recieve WasteCoins</h3>
-          <p class="step-desc">Get your wallet instantly credited with WasteCoins after each scan. Our WasteCoin wallet is secure and always available to you 24/7</p>
+          <p class="step-desc">Get your wallet instantly credited with WasteCoins after each scan. Our WasteCoin wallet is secure and always available to you 24/7.</p>
         </div>
       </div>
       <div class="device-section wow fadeInLeft">
@@ -266,7 +281,7 @@
           <div class="content  wow fadeInUp"  data-wow-delay = "0.6s">
             <div class="icon-wrapper"><img src="./img/world.SVG" alt=""></div>
             <h3 class="step-title">Safer Ecosystem</h3>
-            <p>Be part of a global innitiative to preserve the environment and ecosystem</p>
+            <p>Be part of a global initiative to preserve the environment and ecosystem</p>
           </div>
         </div>
         <a href="./get-app.html" class="wow fadeInUp get-app-btn" data-wow-delay = "0.5s" title="get started">Get Started</a>
@@ -281,14 +296,16 @@
         <div class="contact">
           <header class="footer-header">Connect with us</header>
           <p class="social-media">
-            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
-              class="email"><span class="fas fa-envelope"></span></a>
             <a href="https://www.facebook.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
             <a href="https://www.twitter.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
             <a href="https://www.instagram.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+              <br> <br>
+              <p class="footer-header">Or send us an email</p>
+              <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
+              class="email"><span class="fas fa-envelope"></span> &nbsp; info@wastecoin.co</a>
           </p>
         </div>
         <div class="others">
