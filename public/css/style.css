@@ -440,7 +440,7 @@ body {
 }
 
 .device-section img {
-  border: 10px solid rgba(0, 0, 0, 0.085);
+  /* border: 10px solid rgba(0, 0, 0, 0.085); */
 }
 
 .device-bg {

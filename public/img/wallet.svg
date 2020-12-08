@@ -5,14 +5,14 @@
 ]>
 <svg version="1.1"
 	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-	 x="0px" y="0px" width="77px" height="71px" viewBox="-0.7 0.1 77 71" enable-background="new -0.7 0.1 77 71"
+	 x="0px" y="0px" width="67px" height="61px" viewBox="-0.7 0.1 77 71" enable-background="new -0.7 0.1 77 71"
 	 xml:space="preserve">
 <defs>
 </defs>
 <path fill="#314F59" stroke="#000000" stroke-miterlimit="10" d="M9.2,42.4L3,2.9c0,0,43.8-11.5,71.4,17.2v48.8L9.2,42.4z"/>
-<polygon fill="#009444" stroke="#000000" stroke-miterlimit="10" points="66.7,47.7 4.9,31.7 12.3,0.6 74.1,16.6 "/>
-<polygon fill="#39B54A" stroke="#000000" stroke-miterlimit="10" points="69.7,36.9 6.1,37.1 6,8.2 69.7,8 "/>
-<ellipse fill="#2BB673" stroke="#000000" stroke-miterlimit="10" cx="35.8" cy="27.9" rx="10.2" ry="10.7"/>
+<polygon fill="#67bc8f" stroke="000000" stroke-miterlimit="10" points="66.7,47.7 4.9,31.7 12.3,0.6 74.1,16.6 "/>
+<polygon fill="#67BC8F" stroke="#000000" stroke-miterlimit="10" points="69.7,36.9 6.1,37.1 6,8.2 69.7,8 "/>
+<ellipse fill="#67cc8f" stroke="" stroke-miterlimit="10" cx="35.8" cy="27.9" rx="10.2" ry="10.7"/>
 <path fill="#314F59" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M64.7,28c0,0,4.5,1.7,9.4-8.3L75,68.9
 	L64.7,28z"/>
 <polygon fill="#314F59" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" points="2.1,2.2 7.5,30.6 0.5,6.4 "/>
