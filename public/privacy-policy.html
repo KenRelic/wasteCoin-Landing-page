@@ -160,25 +160,41 @@
 
 
 <body>
-  <nav class="nav nav-style-dark">
-    <div class="logo-section">
-      <div class="logo">
-        <a href="./index.html" tabindex="1" title="WasteCoin Home page">  <img src="./img/logo.svg" alt="wastecoin logo">
-        <p>WasteCoin</p></a>
-      
+     <!-- Desktop nav bar -->
+     <nav class="nav nav-style-dark"  id="nav-desktop">
+      <div class="logo-section">
+        <div class="logo">
+          <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
+            <p>WasteCoin</p>
+          </a>
+        </div>
       </div>
-      <div class="menu-icon"  tabindex="1" title="menu toggle">
-        <span id="icon" class="fa fa-bars"></span>
+      <div class="menu-items-section">
+        <a href="#how-it-works" title="How it works">How it works</a>
+        <a href="#why-wasteCoin" title="Why WasteCoin">Why WasteCoin</a>
+        <a href="#contact" title="contact us">Contact Us</a>
+        <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
       </div>
-    </div>
-    <div class="menu-items-section">
-      <a href="./index.html#how-it-works" title="How it works">How it works</a>
-      <a href="./index.html#why-wasteCoin" title="Why wastecoin">Why WasteCoin</a>
-      <a href="#contact" title="contact us">Contact Us</a>
-      <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
-    </div>
-  </nav>
-
+    </nav>
+    <!-- Mobile nav bar -->
+    <nav class="nav nav-style-dark" id="nav-mobile">
+      <div class="logo-section">
+        <div class="logo">
+          <a href="./index.html" tabindex="0" title="WasteCoin Home page"> <img src="./img/logo.svg" alt="WasteCoin logo">
+            <p>WasteCoin</p>
+          </a>
+        </div>
+        <div class="menu-icon" tabindex="0" title="menu toggle">
+          <span id="icon" class="fa fa-bars"></span>
+        </div>
+      </div>
+      <div class="menu-items-section-mobile">
+        <a href="#how-it-works" title="How it works">How it works</a>
+        <a href="#why-wasteCoin" title="Why WasteCoin">Why WasteCoin</a>
+        <a href="#contact" title="contact us">Contact Us</a>
+        <a href="./get-app.html" class="get-app-btn" title="get the app">Get Started</a>
+      </div>
+    </nav>
   <main class="main">
     <section id="privacy" class="section">
       <h1>Privacy Policy for WasteCoin</h1>
@@ -302,20 +318,22 @@
     </section>
     <!-- WHY WASTECOIN SECTION ENDS -->
   </main>
-  <footer class="footer">  
+  <footer class="footer">
     <div class="footer-content-wrapper" id="contact">
       <div class="footer-content">
         <div class="contact">
           <header class="footer-header">Connect with us</header>
           <p class="social-media">
-            <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
-              class="email"><span class="fas fa-envelope"></span></a>
             <a href="https://www.facebook.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on facebook"><span class="fab fa-facebook facebook"></span></a>
             <a href="https://www.twitter.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on twitter"><span class="fab fa-twitter twitter"></span></a>
             <a href="https://www.instagram.com/wastecoins" target="_blank" rel="noreferrer"
               title="contact us on instagram"><span class="fab fa-instagram"></span></a>
+              <br> <br>
+              <p class="footer-header">Or send us an email</p>
+              <a href="mailto:info@wastecoin.co" rel="noreferrer" target="_blank" title="send us an email"
+              class="email"><span class="fas fa-envelope"></span> &nbsp; info@wastecoin.co</a>
           </p>
         </div>
         <div class="others">
