@@ -1,4 +1,5 @@
 const filesToCache = [
+  // '/offline.html',
   'css/all.css',
   'js/wow.min.js',
   'css/animate.css',
@@ -8,7 +9,6 @@ const filesToCache = [
   'img/photo2.PNG',
   'img/photo3.PNG',
   'img/photo4.PNG',
-  'img/photo5.PNG',
   'img/wallet.svg',
   'img/bg-illustration.webp',
   'img/logo.svg',
@@ -23,7 +23,7 @@ const filesToCache = [
   'fonts/Montserrat-Bold.woff'
 ];
 
-const cacheName = 'wastecoin-cache-v1';
+const cacheName = 'wastecoin-cache-v2';
 
 self.addEventListener('install', event => {
   console.log('Attempting to install service worker and cache static assets');
@@ -77,6 +77,7 @@ self.addEventListener('fetch', function (event) {
           return response
         });
     }).catch(function () {
+      console.log('offline')
       return caches.match('/offline.html');
     })
   );

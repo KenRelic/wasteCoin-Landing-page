@@ -369,7 +369,7 @@ body {
 }
 
 .step-title {
-  font-size: 1.3em;
+  font-size: 1.9rem;
   color: #222;
   font-weight: 700;
   margin: 0.3em 0;
@@ -378,11 +378,11 @@ body {
 }
 
 .heading {
-  font-size: 3.5em;
+  font-size: 2.8rem;
 }
 
 .step-desc {
-  font-size: 1.5em;
+  font-size: 1.3rem;
 }
 
 #how-it-works-section,
@@ -417,7 +417,7 @@ body {
 #how-it-works-section2 h3,
 #how-it-works-section3 h3,
 #how-it-works-section4 h3 {
-  font-size: 32px;
+  font-size: 1.9rem;
 }
 
 #how-it-works-section2 .steps-section,
@@ -604,17 +604,18 @@ body {
 .section-content .content-wrapper {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 }
 
 .content-wrapper .content {
   text-align: center;
   width: 30%;
-  height: 300px;
+  min-height: 350px;
   background-color: #fff;
   border-radius: 2em;
   margin-top: 3em;
+  padding-bottom:30px;
 }
 
 .icon-wrapper {
@@ -638,11 +639,12 @@ body {
 
 .content h3 {
   color: #197f96;
-  padding: 0 1em;
+  padding: 0 1rem;
 }
 
 .content p {
-  padding: 0 1em;
+  padding: 0 1rem;
+  font-size:1.3rem
 }
 
 /* FOOTER SECTION STYLING */
@@ -652,8 +654,8 @@ body {
 
 .footer-content-wrapper {
   background-color: #002a34;
-  padding: 1em;
-  margin-top: -10em;
+  padding: 1rem;
+  margin-top: -10rem;
   color: #e0fbff;
   width: 100%;
   flex-direction: column;
@@ -678,7 +680,7 @@ body {
 .footer-content>div {
   flex: 1;
   width: 32%;
-  margin: 1em;
+  /* margin: 1em; */
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -704,7 +706,7 @@ body {
 .footer-content a > span {
   display: inline-block;
   vertical-align: middle;
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 .copyright {
@@ -717,7 +719,7 @@ body {
 
 @media all and (max-width:1200px) {
   .banner-text h1 {
-    font-size: 4em;
+    font-size: 4rem;
   }
 }
 
