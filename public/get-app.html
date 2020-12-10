@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Introducing WasteCoin - a smart mobile app that acts as the digital bank for your household recyclable waste, turning your waste into wealth." />
- <title>Coming soon</title>
+  <title>Coming soon</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#000d10">
   <meta name="apple-mobile-web-app-title" content="WasteCoin Nigeria website">
@@ -139,7 +139,7 @@
               <input type="email" name="" id="email">
               <p class="error-msg">Please provide a valid email address.</p>
             </div>
-            <button type="submit" id="send-email-btn">Join Waiting List</button>
+            <button type="submit" id="send-email-btn">Join the waitlist</button>
           </form>
         </div>
         <div class="media-links">
@@ -152,15 +152,31 @@
         </div>
       </div>
       <div id="brand-image-wrapper">
-        <!-- <img src="./img/phone.svg" alt=""> -->
+          <h3 class="countdown"></h3>
         <div class="email-sent-wrapper">
           <h2>Thanks</h2>
           <p>Your email has been added to the waiting list. You will be notified when the app is launched.</p>
-
         </div>
       </div>
+
     </section>
     <style>
+      .countdown {
+        font-size: 3rem;
+        color: #ffffff6b;
+        text-align: start;
+        opacity: .4;
+
+      }
+
+      .countdown em {
+        font-style: normal;
+        color: #01dec4;
+        vertical-align: middle;
+        font-size: 7rem;
+        line-height: 1;
+      }
+
       html {
         background-color: #b5f2dc;
         font-size: 13px;
@@ -222,6 +238,7 @@
         flex-direction: column;
         text-align: center;
         padding: 30px;
+        position: relative;
       }
 
       .notice-wrapper {
@@ -232,7 +249,6 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 24px;
-        /* width: 0; */
       }
 
       .email-sent-wrapper {
@@ -376,10 +392,6 @@
           box-shadow: none;
         }
 
-        /* .notice-wrapper button {
-          width: 240px;
-        } */
-
         .notice-wrapper-img-section {
           box-shadow: none;
         }
@@ -391,17 +403,6 @@
         #brand-image-wrapper {
           display: none;
         }
-
-        /* form {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        form #send-email-btn {
-          width: fit-content;
-          margin-top: 20px;
-          width: 100%;
-        } */
 
         form .input-wrapper {
           width: 100%;
@@ -431,12 +432,14 @@
         #brand-image-wrapper {
           display: none;
         }
+
         form .input-wrapper {
           width: 100%;
         }
       }
+
       @media all and (max-width: 632px) {
-       form {
+        form {
           flex-direction: column;
           align-items: flex-start;
         }
@@ -447,6 +450,7 @@
           width: 100%;
         }
       }
+
       @media all and (max-height: 768px) and (max-width:768px) {
         html {
           background-color: #fff;
@@ -511,7 +515,9 @@
       e.preventDefault();
       if (form.checkValidity() && emalInput.value !== '') {
         emailData = emalInput.value;
-        return postEmail('https://wastecoinmvp.herokuapp.com/email_collector', { "email": `${emailData}` });
+        return postEmail('https://wastecoinmvp.herokuapp.com/email_collector', {
+          "email": `${emailData}`
+        });
       };
       return errorMsg.style.display = 'block';
     })
@@ -520,9 +526,9 @@
       try {
         let response = await fetch(url, {
           method: 'POST',
-          mode: 'cors', // no-cors, *cors, same-origin
-          cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-          credentials: 'same-origin', // include, *same-origin, omit
+          mode: 'cors', 
+          cache: 'no-cache',
+          credentials: 'same-origin',
           body: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json'
@@ -530,10 +536,10 @@
           }
         });
         let status = await response.status;
-        if(status === 200) return showSentEmailConfirmationModal();        
+        if (status === 200) return showSentEmailConfirmationModal();
       } catch (err) {
         console.log(err);
-      }
+      };
     };
 
     function showSentEmailConfirmationModal() {
@@ -541,6 +547,36 @@
       brandImgWrapper.style.gridColumn = '1 / span 5';
       brandImgWrapper.style.display = 'flex';
       noticeWrapper.style.display = 'none';
+    };
+
+    const countdownElem = document.querySelector('.countdown');
+    let timeElem = document.querySelectorAll('.countdown em');
+    const completionTime = '4/30/2021';
+
+    function getDecimals(n) {
+      let num = String(n);
+      num = num.replace(/[0-9]+\./, '0.');
+      return Number(num);
+    }
+
+    function calculateTime() {
+      let duration = new Date(completionTime) - new Date();
+      let days = Math.floor(duration / 1000 / 3600 / 24)
+      let hours = Math.floor(duration / 1000 / 3600 % 24);
+      let minutes = Math.floor(((duration / 1000 / 3600 % 24) - hours) * 60);
+      let unflooredHour = (((duration / 1000 / 3600 % 24) - hours) * 60);
+      seconds = Math.floor(getDecimals(unflooredHour) * 60);
+
+      countdownElem.innerHTML =
+        `<em>${days}</em> ${days>1? 'Days':'Day'} <br>
+        <em>${hours}</em> ${hours>1? 'Hrs':'Hr'} <br> 
+        <em>${minutes}</em> ${minutes>1? 'Mins':'Min'} <br>
+        <em>${seconds}</em> ${seconds>1? 'Secs':'Sec'}`;
+    };
+
+    let countDown = setInterval(calculateTime, 1000);
+    window.onload = () => {
+      countDown;
     };
   </script>
 </body>

@@ -1,5 +1,5 @@
 const filesToCache = [
-  // '/offline.html',
+  'offline.html',
   'css/all.css',
   'js/wow.min.js',
   'css/animate.css',
@@ -9,10 +9,12 @@ const filesToCache = [
   'img/photo2.PNG',
   'img/photo3.PNG',
   'img/photo4.PNG',
-  'img/wallet.svg',
   'img/bg-illustration.webp',
   'img/logo.svg',
   'img/leaf.svg',
+  'img/artwork1.svg',
+  'img/artwork2.svg',
+  'img/artwork3.svg',
   'webfonts/fa-solid-900.woff2',
   'webfonts/fa-brands-400.woff2',
   'fonts/Poppins-ExtraBold.woff2',
@@ -27,6 +29,7 @@ const cacheName = 'wastecoin-cache-v2';
 
 self.addEventListener('install', event => {
   console.log('Attempting to install service worker and cache static assets');
+  self.skipWaiting();
   event.waitUntil(
     caches.open(cacheName)
       .then(cache => {
@@ -59,26 +62,12 @@ self.addEventListener('fetch', function (event) {
   event.respondWith(
     // Try the cache
     caches.match(event.request).then(function (response) {
-      // Fall back to network
-
-      //  const asset = event.request.url.replace(event.currentTarget.location.origin,'')
-      //  if(filesToCache.includes(asset)){
-      //    console.log(asset, 'found')
-      //  }else if(filesToAlwaysRecache.includes(asset)){
-      //    console.log(asset, 'will be recached always')
-      //  }   
-
       return response || fetch(event.request)
         .then(response => {
-          // if(filesToAlwaysRecache.includes(asset)){
-          //   console.log(asset, 'will be recached always')
-          // }
-          // console.log(response)
           return response
         });
     }).catch(function () {
-      console.log('offline')
-      return caches.match('/offline.html');
+      return caches.match(`${event.currentTarget.location.origin + '/offline.html'}`);
     })
   );
 });
